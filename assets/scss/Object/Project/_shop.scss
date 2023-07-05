@@ -1,0 +1,151 @@
+@use '../../Foundation/global' as *;
+.p-shop {
+  background-color: $color-background;
+  padding: 80px 0 0;
+  @include mq('tab') {
+    padding: 60px 0;
+  }
+  &__container {
+    margin-top: 60px;
+    @include mq('tab') {
+      margin-top: 30px;
+    }
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    color: $color-text;
+    border-bottom: dotted 1px $color-border;
+    @include mq('tab') {
+      display: block;
+    }
+  }
+  &__area {
+    max-width: 200px;
+    width: 100%;
+    background-color: $color-main;
+    color: $color-background-sub;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq('tab') {
+      position: relative;
+      line-height: 60px;
+      max-width: none;
+      cursor: pointer;
+      &::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border: 0;
+        border-bottom: solid 2px #fff;
+        border-right: solid 2px #fff;
+        position: absolute;
+        top: 50%;
+        right: 19px;
+        margin-top: -6px;
+        transform: rotate(45deg);
+      }
+      &.active::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border: 0;
+        border-bottom: solid 2px #fff;
+        border-right: solid 2px #fff;
+        position: absolute;
+        top: 53%;
+        right: 19px;
+        margin-top: -6px;
+        transform: rotate(227deg);
+      }
+      &::after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        margin-top: -10px;
+      }
+    }
+  }
+  &__loopBox {
+    width: 100%;
+    @include mq("tab") {
+      display: none;
+    }
+    & .active {
+      display: block;
+    }
+  }
+  &__loop {
+    width: 100%;
+    list-style: none;
+  }
+  &__innerArea {
+    border-top: solid 1px $color-border;
+    border-right: solid 1px $color-border;
+    width: 100%;
+    background-color: #fff;
+    @include mq('tab') {
+      border: solid 1px $color-border;
+    }
+  }
+  &__prefBox {
+    @include mq('tab') {
+      display: flex;
+    }
+  }
+  &__iconPref {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    @include mq('tab') {
+      width: auto;
+    }
+  }
+  &__iconContainer {
+    margin-left: 20px;
+  }
+  &__icon {
+    width: 24px;
+  }
+  &__pref {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  &__shopNameList {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq('tab') {
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+  }
+  &__shopName {
+    list-style: none;
+    margin: 20px;
+    font-size: 18px;
+    min-width: 100px;
+    border: solid;
+    text-align: center;
+    @include mq('tab') {
+      margin: 10px;
+    }
+  }
+  &__shopName > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: $color-text;
+    padding: 5px 15px;
+  }
+}

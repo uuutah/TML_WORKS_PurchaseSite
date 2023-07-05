@@ -1,0 +1,17 @@
+@use '../Foundation/global' as *;
+.l-container {
+  width: $width-base;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 $padding-pc;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}

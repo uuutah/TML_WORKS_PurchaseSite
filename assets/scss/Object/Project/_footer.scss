@@ -1,0 +1,326 @@
+@use '../../Foundation/global' as *;
+.p-footer {
+  padding: 80px 0;
+  @include mq('tab') {
+    padding: 60px 0 10px;
+  }
+  &__contentList {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    list-style: none;
+    color: $color-background-sub;
+    & a {
+      color: $color-background-sub;
+    }
+    @include mq('tab') {
+      display: block;
+    }
+  }
+  &__contentItem {
+    position: relative;
+    width: 30%;
+    max-width: 350px;
+    height: 16vw;
+    max-height: 200px;
+    @include mq('tab') {
+      max-width: none;
+      width: 100%;
+      height: 300px;
+      margin: 0 auto;
+      &:nth-child(n + 2) {
+        margin-top: 30px;
+      }
+    }
+    @include mq("sp") {
+      height: 130px;
+    }
+    & a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__backGround {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .3;
+  }
+  &__imgContainer {
+    height: 100%;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 100%;
+  }
+  &__textArea {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%);
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    @include mq('tab') {
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    @include mq('sp') {
+      font-size: 32px;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: bold;
+    @include mq('tab') {
+      font-size: 24px;
+    }
+    @include mq('sp') {
+      font-size: 16px;
+    }
+  }
+  &__line {
+    border-bottom: #fff 1px solid;
+    margin-top: 80px;
+    @include mq('tab') {
+      margin-top: 40px;
+      border: none;
+    }
+  }
+  &__textBox {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px auto 0;
+    width: 100%;
+    max-width: 850px;
+    @include mq('tab') {
+      display: block;
+      margin: 0 auto;
+      max-width: none;
+    }
+  }
+  &__boxList {
+    list-style: none;
+    color: #fff;
+    @include mq('sp') {
+      align-items: baseline;
+      flex-direction: row;
+      gap: 5%;
+      flex-wrap: wrap;
+      &:nth-child(2n + 1) {
+        display: block;
+      }
+    }
+  }
+  &__item {
+    white-space: nowrap;
+    @include mq('tab') {
+      padding: 10px 20px;
+      border-top: 1px solid $color-background-sub;
+    }
+    & a {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: #fff;
+    }
+    &:not(:first-child) {
+      margin-top: 30px;
+      @include mq('tab') {
+        margin-top: 0;
+      }
+    }
+  }
+  &__shopList {
+    position: relative;
+    @include mq('tab') {
+      padding: 10px 20px;
+    }
+    & a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  &__trigger {
+    @include mq('tab') {
+      &::before {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: rotate(90deg);
+        transition-duration: 0.5s;
+      }
+      &.open::before {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: rotate(0);
+        transition-duration: 0.5s;
+      }
+      &::after {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+      }
+    }
+  }
+  &__shopItem {
+    position: relative;
+    margin-left: 30px;
+    &::before {
+      content: '';
+      border-top: 1px solid #fff;
+      width: 12px;
+      display: inline-block;
+      position: absolute;
+      top: 35%;
+      left: -20px;
+      transform: rotate(35deg);
+    }
+    &::after {
+      content: '';
+      border-top: 1px solid #fff;
+      width: 12px;
+      display: inline-block;
+      position: absolute;
+      top: 60%;
+      left: -20px;
+      transform: rotate(-35deg);
+    }
+    @include mq('tab') {
+      white-space: nowrap;
+      margin-left: 0;
+      display: none;
+      padding: 10px 50px;
+      border-top: 1px solid #fff;
+      &:first-child {
+        margin-top: 10px;
+      }
+      &::before {
+        content: '';
+        left: -2px;
+        display: contents;
+      }
+      &::after {
+        content: '';
+        left: -2px;
+        display: contents;
+      }
+    }
+  }
+  &__shopItem {
+    & a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  &__category > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+  }
+  &__category {
+    white-space: nowrap;
+    + .p-footer__category {
+      margin-top: 30px;
+    }
+    @include mq('tab') {
+      padding: 10px 20px;
+      + .p-footer__category {
+        margin-top: 10px;
+      }
+    }
+    @include mq('tab') {
+      border-top: 1px solid #fff;
+      + .p-footer__category {
+        margin-top: auto;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    @include mq("tab") {
+      justify-content: space-between;
+    }
+    @include mq('sp') {
+      display: block;
+      padding: 20px 0;
+    }
+  }
+  &__logoContainer {
+    width: 30%;
+    height: 100px;
+    @include mq('tab') {
+      width: 50%;
+      min-width: 230px;
+      height: 100%;
+      margin: 0 auto;
+    }
+    @include mq('sp') {
+      width: 50%;
+      min-width: 250px;
+    }
+  }
+  &__logo {
+    width: 100%;
+  }
+  &__navListBox {
+    display: flex;
+    margin-left: 20%;
+    gap: 10%;
+    width: 50%;
+    white-space: nowrap;
+    @include mq('tab') {
+      justify-content: flex-end;
+      width: 100%;
+      gap: 10%;
+      font-size: 14px;
+    }
+    @include mq('sp') {
+      justify-content: space-between;
+      gap: 0;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto 0px;
+    }
+  }
+  &__navList {
+    list-style: none;
+    height: 100px;
+    line-height: 100px;
+    @include mq('sp') {
+      line-height: inherit;
+      height: auto;
+      font-size: 12px;
+    }
+    & a {
+      text-decoration: none;
+      color: $color-text;
+    }
+  }
+}

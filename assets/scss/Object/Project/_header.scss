@@ -1,0 +1,450 @@
+@use '../../Foundation/global'as *;
+
+.p-header {
+  background-color: $color-background-sub;
+  // height: 100%;
+  letter-spacing: normal;
+  font-family: $font-base;
+  // 70% バージョン
+  // $scale: 0.7;
+  // // ページを 70% のサイズに縮小
+  // transform: scale($scale);
+  // // デフォルトでは中央に寄ってしまうので、左上を起点に拡縮するように指定
+  // transform-origin: left top;
+  // // ブラウザサイズと画面サイズを一致
+  // // height: 100vh;
+  // width: calc(100% / $scale);
+
+  &__titleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $width-base;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 $padding-pc;
+    @include mq('tab') {
+      padding-left: $padding-tab;
+      padding-right: $padding-tab;
+    }
+    @include mq('sp') {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &__logo {
+    height: 60px;
+    @include mq("tab") {
+      width: 230px;
+      height: $header-height-tab;
+    }
+    @include mq("sp") {
+      width: 40vw;
+      min-width: 100px;
+      height: $header-height-sp;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      @include mq("tab") {
+        object-fit: contain;
+      }
+    }
+  }
+  &__menu {
+    display: none;
+    @include mq("tab") {
+      position: relative;
+      display: block;
+      width: 40px;
+      cursor: pointer;
+    }
+    @include mq("sp") {
+      width: 20px;
+    }
+  }
+  &__menuArea {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include mq("sp") {
+      gap: 10px;
+    }
+  }
+  &__btnArea {
+    @include mq("sp") {
+      display: flex;
+      // flex-direction: column;
+      gap: 3px;
+    }
+  }
+  &__btn {
+    @include mq("tab") {
+      width: 110px;
+      font-size: 1.8vw;
+    }
+    @include mq("sp") {
+      width: 15vw;
+      min-width: 60px;
+      height: 25px;
+      font-size: 11px;
+    }
+  }
+  &__contactBtn {
+    @include mq("tab") {
+      width: 110px;
+      font-size: 1.8vw;
+    }
+    @include mq("sp") {
+      width: 15vw;
+      min-width: 72px;
+      height: 25px;
+      font-size: 10px;
+    }
+  }
+  &__menuLine {
+    height: 1px;
+    width: 100%;
+    background-color: $color-text;
+    transition: all .5s;
+    &:not(:first-child) {
+      margin-top: 10px;
+      @include mq("sp") {
+        margin-top: 5px;
+      }
+    }
+    &.open {
+      &:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(6px) rotate(-45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        transform: translateY(-6px) rotate(45deg);
+        @include mq("sp") {
+          top: 8px;
+        }
+      }
+    }
+  }
+  &__menuList {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    border-top: 1.5px solid #CBCBCB;
+    @include mq("tab") {
+      display: none;
+      position: fixed;
+      top: $header-height-tab;
+      left: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 5px;
+      width: 100%;
+      height: calc( 100%  - #{$header-height-tab} );
+      background-color: $color-main;
+      overflow-y: auto;
+    }
+    @include mq("sp") {
+      top: $header-height-sp;
+      height: calc( 100% - #{$header-height-sp} );
+    }
+  }
+  &__menuItem {
+    position: relative;
+    padding: 5px 0;
+    width: 14%;
+    max-width: 160px;
+    min-width: 130px;
+    &:first-child::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: block;
+      content: "";
+      width: 1.5px;
+      height: 60%;
+      background-color: #CBCBCB;
+    }
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+      content: "";
+      width: 1.5px;
+      height: 60%;
+      background-color: #CBCBCB;
+    }
+    @include mq ("tab") {
+      justify-content: flex-start;
+      width: 95%;
+      margin: 0 auto;
+      padding: 10px 20px;
+      max-width: none;
+      min-width: none;
+      border-bottom: 1.5px solid $color-background;
+      &:first-child::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+      &:last-child {
+        border: none;
+      }
+    }
+    &:not(:first-child){
+      // border-left: 1.5px solid #CBCBCB;
+      @include mq ("tab"){
+        border-left: none;
+      }
+    }
+  }
+  &__drawerMenuItem {
+    @include mq("tab"){
+      pointer-events: none;
+    }
+  }
+  &__menuLink {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    // text-align: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-decoration: none;
+    color: $color-text;
+    white-space: nowrap;
+    @include mq("tab") {
+      top: 0;
+      transform: none;
+      justify-content: flex-start;
+      &::before {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 12px;
+        display: inline-block;
+        position: absolute;
+        top: 30%;
+        right: 0;
+        transform: rotate(35deg);
+      }
+      &::after {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 12px;
+        display: inline-block;
+        position: absolute;
+        top: 60%;
+        right: 0;
+        transform: rotate(-35deg);
+      }
+    }
+  }
+  &__shopList {
+    display: none;
+    list-style: none;
+  }
+  &__shopItem {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px 20px 10px 70px;
+    border-bottom: 1.5px solid #F5F5F5;
+    & a {
+      position: relative;
+      display: block;
+      width: 100%;
+      color: $color-background-sub;
+      text-decoration: none;
+      font-size: clamp(0.9rem, 1.6vw, 1.3rem);
+      @include mq("tab") {
+        &::before {
+          content: '';
+          border-top: 1px solid #fff;
+          width: 12px;
+          display: inline-block;
+          position: absolute;
+          top: 30%;
+          right: 0;
+          transform: rotate(35deg);
+        }
+        &::after {
+          content: '';
+          border-top: 1px solid #fff;
+          width: 12px;
+          display: inline-block;
+          position: absolute;
+          top: 60%;
+          right: 0;
+          transform: rotate(-35deg);
+        }
+      }
+    }
+  }
+  &__drawerMenuItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-decoration: none;
+    color: $color-text;
+    text-align: center;
+    white-space: nowrap;
+    @include mq("tab") {
+      top: 0;
+      transform: none;
+      justify-content: flex-start;
+      &::before {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 45%;
+        right: -5px;
+        transform: rotate(90deg);
+        transition-duration: 0.5s;
+      }
+      &.open::before {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 45%;
+        right: 0;
+        transform: rotate(0);
+        transition-duration: 0.5s;
+      }
+      &::after {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 45%;
+        right: -5px;
+        transform: none;
+      }
+    }
+  }
+  &__menuText {
+    font-size: clamp(0.5rem, 1.3vw, 0.9rem);
+    @include mq("tab") {
+      color: $color-background-sub;
+    }
+  }
+  &__menuLogo {
+    min-width: 20px;
+    height: 20px;
+  }
+  &__contentList {
+    display: none;
+    @include mq("tab") {
+      display: block;
+      // flex-direction: column;
+      // margin-top: 30px;
+      // gap: 50px;
+      list-style: none;
+      padding: 30px 100px;
+      color: $color-background-sub;
+    }
+    @include mq("sp") {
+      padding: 30px 20px;
+    }
+  }
+  &__contentItem {
+    position: relative;
+    max-width: 350px;
+    & a {
+      color: $color-background-sub;
+    }
+    @include mq('tab') {
+      max-width: none;
+      height: 300px;
+      margin: 0 auto;
+      &:nth-child(n + 2) {
+        margin-top: 20px;
+        @include mq("sp") {
+          margin-top: 10px;
+        }
+      }
+    }
+    @include mq("tab") {
+      height: 25vw;
+      min-height: 100px;
+    }
+  }
+  &__backGround {
+    @include mq("tab") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      width: 100%;
+      height: 25vw;
+      background-color: #000000;
+      opacity: .3;
+    }
+  }
+  &__imgContainer {
+    @include mq("tab") {
+      height: 100%;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 0%;
+  }
+  &__textArea {
+    @include mq('tab') {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__title {
+    @include mq("tab") {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    @include mq("sp") {
+      font-size: 6vw;
+    }
+  }
+  &__text {
+    @include mq("tab") {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    @include mq("sp") {
+      font-size: 3vw;
+    }
+  }
+}

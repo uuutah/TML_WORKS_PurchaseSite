@@ -1,0 +1,86 @@
+@use '../../Foundation/global' as *;
+.p-work {
+  padding: 120px 0 80px;
+  background-color: $color-background;
+  @include mq('tab') {
+    padding: 60px 0;
+  }
+  &__subTitle {
+    font-size: 22px;
+    @include mq("sp") {
+      font-size: 16px;
+    }
+    & span {
+      font-size: 29px;
+    }
+  }
+  &__linefeed {
+    display: none;
+    @include mq('sp') {
+      display: block;
+    }
+  }
+  &__list {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    :nth-child(n + 5) {
+      margin-top: 30px;
+    }
+    @include mq('tab') {
+      gap: 50px;
+      display: block;
+      margin: 40px auto 0;
+      max-width: 400px;
+    }
+  }
+  &__item {
+    list-style: none;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    @include mq('tab') {
+      width: auto;
+      margin: 0 auto;
+      & + .p-work__item {
+        margin-top: 50px;
+      }
+    }
+  }
+  &__imgContainer {
+    width: 23vw;
+    height: 23vw;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+    @include mq('tab') {
+      width: 70vw;
+      height: 70vw;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__title {
+    font-size: 32px;
+    margin-top: 40px;
+    color: $color-text;
+    white-space: nowrap;
+    @include mq('tab') {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  }
+  &__text {
+    margin-top: 25px;
+    font-size: 16px;
+    color: $color-text;
+    @include mq('tab') {
+      margin-top: 20px;
+    }
+  }
+}

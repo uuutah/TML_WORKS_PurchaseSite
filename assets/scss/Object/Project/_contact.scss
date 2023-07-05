@@ -1,0 +1,74 @@
+@use '../../Foundation/global'as *;
+.p-contact {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 120px 0 160px;
+  @include mq("tab") {
+    width: 100%;
+    max-width: none;
+    padding: 60px 0 80px;
+  }
+  &__text {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  &__form {
+    margin-top: 40px;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__listItem {
+    display: flex;
+    flex-direction: column;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border: 0.5px solid $color-text;
+  }
+  &__textarea {
+    width: 100%;
+    height: 240px;
+    margin-top: 10px;
+    border: 0.5px solid $color-text;
+  }
+  &__policy {
+    margin-top: 60px;
+    text-align: center;
+  }
+  &__policyCheck {
+    margin-top: 25px;
+  }
+  &__submit {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 45px auto 0;
+    padding: 15px 0;
+    text-align: center;
+    color: $color-background-sub;
+    background-color: $color-text;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &__prev {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+    color: $color-background-sub;
+    background-color: $color-border;
+    border: none;
+    border-radius: 5px;
+  }
+}
