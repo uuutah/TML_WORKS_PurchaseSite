@@ -157,7 +157,7 @@ select {
 
 .l-footer {
   width: 100%;
-  background-color: #ff9801;
+  background-color: #3FB44D;
 }
 .l-footer__bottom {
   background-color: #fff;
@@ -171,7 +171,7 @@ select {
 
 .c-sample {
   font-size: 18px;
-  background-color: #FF9801;
+  background-color: #3FB44D;
 }
 
 .c-btn {
@@ -295,7 +295,7 @@ select {
 }
 .c-hero__titleBackground {
   width: 50%;
-  background-color: #FF9801;
+  background-color: #3FB44D;
   background-image: -webkit-linear-gradient(4deg, rgb(255, 152, 1) 10%, rgb(234, 221, 207) 90%);
   background-image: linear-gradient(86deg, rgb(255, 152, 1) 10%, rgb(234, 221, 207) 90%);
 }
@@ -884,7 +884,7 @@ select {
   height: 100px;
   padding: 20px;
   text-align: center;
-  background-color: #FF9801;
+  background-color: #3FB44D;
   position: relative;
   border: none;
 }
@@ -898,7 +898,7 @@ select {
   height: 0px;
   margin: auto;
   border-style: solid;
-  border-color: #FF9801 transparent transparent transparent;
+  border-color: #3FB44D transparent transparent transparent;
   border-width: 20px 20px 0 20px;
 }
 @media (max-width: 900px) {
@@ -910,7 +910,7 @@ select {
 }
 .p-menu__title {
   font-size: 32px;
-  color: #FF9801;
+  color: #3FB44D;
 }
 @media (max-width: 900px) {
   .p-menu__title {
@@ -1055,7 +1055,7 @@ select {
   margin-top: 40px;
 }
 .p-menu__btn {
-  background-color: #FF9801;
+  background-color: #3FB44D;
   width: 200px;
   height: 50px;
   border: none;
@@ -1101,7 +1101,7 @@ select {
 .p-shop__area {
   max-width: 200px;
   width: 100%;
-  background-color: #FF9801;
+  background-color: #3FB44D;
   color: #FFF;
   text-align: center;
   line-height: 100px;
@@ -1327,7 +1327,7 @@ select {
   margin-top: 40px;
 }
 .p-topNews__btn {
-  background-color: #FF9801;
+  background-color: #3FB44D;
   width: 200px;
   height: 50px;
   border: none;
@@ -2040,7 +2040,7 @@ select {
     gap: 5px;
     width: 100%;
     height: calc( 100% - 56px );
-    background-color: #FF9801;
+    background-color: #3FB44D;
     overflow-y: auto;
   }
 }
@@ -2699,7 +2699,7 @@ select {
   height: 100px;
   padding: 20px;
   text-align: center;
-  background-color: #FF9801;
+  background-color: #3FB44D;
   position: relative;
   border: none;
 }
@@ -2713,7 +2713,7 @@ select {
   height: 0px;
   margin: auto;
   border-style: solid;
-  border-color: #FF9801 transparent transparent transparent;
+  border-color: #3FB44D transparent transparent transparent;
   border-width: 20px 20px 0 20px;
 }
 @media (max-width: 900px) {
@@ -2731,7 +2731,7 @@ select {
 }
 .p-topMenu__title {
   font-size: 32px;
-  color: #FF9801;
+  color: #3FB44D;
 }
 @media (max-width: 900px) {
   .p-topMenu__title {
@@ -2853,7 +2853,7 @@ select {
   }
 }
 .p-topMenu__btn {
-  background-color: #FF9801;
+  background-color: #3FB44D;
   width: 200px;
   height: 50px;
   margin: 40px auto 0;
@@ -3048,7 +3048,7 @@ select {
   }
 }
 .p-shopInfomation__contactMail {
-  background-color: #FF9801;
+  background-color: #3FB44D;
   font-size: 24px;
 }
 @media (max-width: 900px) {
@@ -3234,7 +3234,7 @@ select {
   }
 }
 .p-shopRepairCost th {
-  background-color: #FF9801;
+  background-color: #3FB44D;
   color: #FFF;
   border: solid 1px #707070;
   font-weight: bold;
@@ -3873,7 +3873,7 @@ select {
 .p-overview__title {
   max-width: 250px;
   width: 100%;
-  background-color: #FF9801;
+  background-color: #3FB44D;
   color: #FFF;
   text-align: center;
   line-height: 100px;

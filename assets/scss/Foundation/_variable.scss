@@ -8,11 +8,13 @@ $width-main: 800px; // メインエリアの幅
 $width-side: 360px; // サイドバーの幅
 
 // フォント関係の設定--------------------
-$font-base:NotoSansJP-Regular;
+$font-base: NotoSansJP-Regular;
+
 @font-face {
   font-family: NotoSansJP-Regular;
   src: url(../../font/NotoSansJP-Regular.otf);
 }
+
 $font-serif: serif;
 $font-size-base: 16px;
 $font-weight-base: 400;
@@ -20,7 +22,7 @@ $line-height-base: calc(27 / 16);
 
 
 // 色関係の設定--------------------------
-$color-main: #FF9801; // サイトカラー
+$color-main: #3FB44D; // サイトカラー
 $color-background: #F5F5F5;
 $color-background-sub: #FFF;
 $color-text: #1B224C; // フォントカラー
@@ -29,11 +31,17 @@ $color-sub: #FFBA00;
 $hover-opacity: 0.7; // 透過度
 
 // 階層
-$layer: (modal: 100, // モ―ダル
-  drawer: 40, // ドロワー
-  floating: 30, // フローティングアイテム
-  header: 20, // ヘッダー
-  footer: 10, // フッター
+$layer: (
+  modal: 100,
+  // モ―ダル
+  drawer: 40,
+  // ドロワー
+  floating: 30,
+  // フローティングアイテム
+  header: 20,
+  // ヘッダー
+  footer: 10,
+  // フッター
   default: 1,
 );
 
