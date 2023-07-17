@@ -54,7 +54,7 @@
               <div class="p-header__menuLogo">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_repair.svg" alt="">
               </div>
-              <p class="p-header__menuText">修理メニュー</p>
+              <p class="p-header__menuText">買取メニュー</p>
             </a>
           </li>
           <li class="p-header__menuItem">
