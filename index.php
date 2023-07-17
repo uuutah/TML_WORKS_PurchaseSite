@@ -142,7 +142,7 @@
         </div>
         <p class="p-topMenu__text">その他</p>
       </li>
-      <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/repair'); ?>'">一覧</button>
+      <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/purchase'); ?>'">一覧</button>
     </ul>
     <ul class="p-topMenu__list">
       <li class="p-topMenu__item">
