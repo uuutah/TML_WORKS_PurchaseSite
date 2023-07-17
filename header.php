@@ -58,14 +58,6 @@
             </a>
           </li>
           <li class="p-header__menuItem">
-            <a class="p-header__menuLink" href="<?php echo home_url("/symptoms"); ?>">
-              <div class="p-header__menuLogo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_symptoms.svg" alt="">
-              </div>
-              <p class="p-header__menuText">症状で選ぶ</p>
-            </a>
-          </li>
-          <li class="p-header__menuItem">
             <a class="p-header__menuLink" href="<?php echo home_url("/revue"); ?>">
               <div class="p-header__menuLogo">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_revue.svg" alt="">
