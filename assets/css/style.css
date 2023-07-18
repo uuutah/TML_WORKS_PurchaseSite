@@ -185,7 +185,7 @@ select {
   cursor: pointer;
 }
 .c-btn__contact {
-  background-color: #FF9800;
+  background-color: #3FB44D;
   color: #FFF;
   border: none;
   border-radius: 5px;
@@ -401,7 +401,7 @@ select {
 }
 .p-shopList__areaButton {
   border: none;
-  background-color: #FFBA00;
+  background-color: #3FB44D;
   color: #FFF;
   width: 100%;
   height: 100%;
