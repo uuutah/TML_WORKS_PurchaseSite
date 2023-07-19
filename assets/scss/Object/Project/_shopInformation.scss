@@ -90,17 +90,20 @@
     justify-content: space-between;
     margin: 80px auto 0;
     max-width: 1050px;
+
     & li:not(:first-child) {
       @include mq('tab') {
         margin-top: 10px;
       }
     }
+
     @include mq('tab') {
       justify-content: flex-start;
       display: block;
       margin-top: 40px;
       width: 80%;
     }
+
     @include mq("sp") {
       width: 100%;
     }
@@ -115,6 +118,7 @@
       color: $color-background-sub;
     }
   }
+
   &__contactItem {
     display: flex;
     justify-content: space-around;
@@ -127,6 +131,7 @@
     width: 30%;
     height: 100px;
     padding: 0 20px;
+
     @include mq('tab') {
       justify-content: flex-start;
       max-width: none;
@@ -136,6 +141,7 @@
       padding: 0 10%;
       gap: 10%;
     }
+
     @include mq('sp') {
       max-width: 100%;
       width: 100%;
@@ -143,13 +149,14 @@
       gap: 5%;
     }
   }
+
   // &__contactMail,
   // &__contactTel,
   // &__contactLine {
   // }
 
   &__contactMail {
-    background-color: $color-main;
+    background-color: #FF9800;
     font-size: 24px;
 
     @include mq('tab') {
@@ -195,11 +202,13 @@
   &__contactInfo {
     text-align: center;
     color: #fff;
+
     @include mq('tab') {
       display: block;
       width: 80%;
       align-items: center;
     }
+
     @include mq("sp") {
       min-width: 170px;
     }
@@ -213,6 +222,7 @@
     margin-top: 10px;
     font-size: 15px;
     font-weight: bold;
+
     @include mq('tab') {
       width: 80%;
       margin: 0 auto;
@@ -228,6 +238,7 @@
   &__contactLine {
     background-color: #5AC363;
     font-size: 20px;
+
     @include mq('tab') {
       margin: auto 0;
       // padding: 5px 4px;
@@ -247,6 +258,7 @@
     //   margin-right: 50px;
     // }
   }
+
   &__contactLineId {
     background-color: $color-background-sub;
     color: #5AC363;
@@ -255,6 +267,7 @@
     margin-top: 10px;
     font-size: 15px;
     font-weight: bold;
+
     @include mq('tab') {
       width: 80%;
       margin: 0 auto;
