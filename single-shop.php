@@ -159,38 +159,20 @@
       </div>
     </div>
     <ul class="p-shopRoot__list">
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-          <img src="<?php echo $cfs->get('root_img1'); ?>" alt="">
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text1', true); ?>
-        </p>
-      </li>
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-          <img src="<?php echo $cfs->get('root_img2'); ?>" alt="">
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text2', true); ?>
-        </p>
-      </li>
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-          <img src="<?php echo $cfs->get('root_img3'); ?>" alt="">
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text3', true); ?>
-        </p>
-      </li>
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-          <img src="<?php echo $cfs->get('root_img4'); ?>" alt="">
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text4', true); ?>
-        </p>
-      </li>
+      <?php $fields02 = CFS()->get('root_list'); ?>
+      <?php if ($fields02) : //faq_loop が存在するとき
+      ?>
+        <?php foreach ($fields02 as $field) : ?>
+          <li class="p-shopRoot__item">
+            <div class="p-shopRoot__itemImg">
+              <img src="<?php echo $field['root_img1']; ?>" alt="">
+            </div>
+            <p>
+              <?php echo get_post_meta($post->ID, 'root_text1', true); ?>
+            </p>
+          </li>
+        <?php endforeach; ?>
+      <?php endif; ?>
     </ul>
     <div class="p-shopRoot__itemMap">
     <?php the_content(); ?>
