@@ -95,15 +95,15 @@
               </a>
             </li>
             <li class="p-header__contentItem">
-              <a href="<?php echo home_url(); ?>">
+              <a href="https://pcworks-rshop.com/">
                 <div class="p-header__backGround"></div>
                 <div class="p-header__imgContainer">
                   <img class="p-header__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer02.jpg" alt="header画像" />
                 </div>
                 <div class="p-header__textArea">
-                  <h2 class="p-header__title">買取</h2>
+                  <h2 class="p-header__title">修理</h2>
                   <p class="p-header__text">
-                    PC関連の買取なら<br>
+                    PC関連の修理なら<br>
                     お任せください
                   </p>
                 </div>
