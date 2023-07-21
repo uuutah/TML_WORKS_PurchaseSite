@@ -15,15 +15,15 @@
           </a>
         </li>
         <li class="p-footer__contentItem">
-          <a href="">
+          <a href="https://pcworks-rshop.com/">
             <div class="p-footer__backGround"></div>
             <div class="p-footer__imgContainer">
               <img class="p-footer__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer02.jpg" alt="footer画像" />
             </div>
             <div class="p-footer__textArea">
-              <h2 class="p-footer__title">買取</h2>
+              <h2 class="p-footer__title">修理</h2>
               <p class="p-footer__text">
-                PC関連の買取なら<br>
+                PC関連の修理なら<br>
                 お任せください
               </p>
             </div>
