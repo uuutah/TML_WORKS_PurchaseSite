@@ -3956,11 +3956,11 @@ select {
 }
 
 .p-blog {
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
-@media (max-width: 599px) {
+@media (max-width: 900px) {
   .p-blog {
-    padding-bottom: 40px;
+    padding: 40px 0;
   }
 }
 .p-blog__date {
@@ -3978,11 +3978,11 @@ select {
 }
 
 .p-privacyPolicy {
-  margin-top: 100px;
+  padding: 100px 0;
 }
-@media (max-width: 599px) {
+@media (max-width: 900px) {
   .p-privacyPolicy {
-    margin-top: 50px;
+    padding: 40px 0;
   }
 }
 .p-privacyPolicy__item {
