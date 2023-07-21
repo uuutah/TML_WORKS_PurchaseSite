@@ -52,10 +52,7 @@
             <a href=" <?php echo home_url("/beginnerPage"); ?>">初めての方へ</a>
           </li>
           <li class="p-footer__item">
-            <a href="<?php echo home_url("/repair"); ?>">修理メニュー</a>
-          </li>
-          <li class="p-footer__item">
-            <a href="<?php echo home_url("/symptoms"); ?>">症状で診断</a>
+            <a href="<?php echo home_url("/purchase"); ?>">買取メニュー</a>
           </li>
         </ul>
         <ul class="p-footer__boxList">

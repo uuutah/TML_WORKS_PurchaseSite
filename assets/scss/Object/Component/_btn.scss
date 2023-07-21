@@ -1,4 +1,4 @@
-@use '../../Foundation/global'as *;
+@use '../../Foundation/global' as *;
 
 .c-btn {
   background-color: #006BBA;
@@ -9,8 +9,9 @@
   height: 40px;
   font-size: 16px;
   cursor: pointer;
+
   &__contact {
-    background-color: #FF9800;
+    background-color: $color-main;
     color: $color-background-sub;
     border: none;
     border-radius: 5px;

@@ -78,122 +78,64 @@
     </ul>
   </div>
 </section>
-<section class="p-topMenu">
+<section class="p-menu">
   <div class="l-container">
-    <div class="p-topMenu__container">
-      <div class="p-topMenu__textContainer orange">
-        <h2 class="p-topMenu__title white">修理メニュー</h2>
-        <h3 class="p-topMenu__subTitle white">Menu</h3>
-      </div>
-      <div class="p-topMenu__textContainer">
-        <h2 class="p-topMenu__title">症状で選択</h2>
-        <h3 class="p-topMenu__subTitle">Symptoms</h3>
+    <div class="c-titleBox">
+      <div class="c-titleBox__wrapper">
+        <h3 class="c-titleBox__title">買取メニュー</h3>
+        <p class="c-titleBox__text">Menu</p>
       </div>
     </div>
-    <ul class="p-topMenu__list show">
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/screen.png" alt="" />
+    <ul class="p-menu__list show">
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/gahag-0088132005-1.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">画面修理</p>
+        <p class="p-menu__text">デスクトップPC</p>
       </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/hddssd.png" alt="" />
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/goriIMGL9729_TP_V.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">
-          HDD・SSDの増設<br />
-          交換（OS再インストール）
-        </p>
+        <p class="p-menu__text">ノートPC</p>
       </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/maintenance.png" alt="" />
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/point1.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">メンテナンス・初期化</p>
+        <p class="p-menu__text">タブレット</p>
       </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/repair-keyboard.png" alt="" />
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/AP2018FTHG5557_TP_V.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">キーボード修理</p>
+        <p class="p-menu__text">スマホ</p>
       </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/battery.png" alt="" />
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/business-switchx4_TP_V.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">バッテリー交換</p>
+        <p class="p-menu__text">ネットワーク機器</p>
       </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/date.png" alt="" />
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/unific528--8617_TP_V.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">データ復旧</p>
+        <p class="p-menu__text">サーバー</p>
       </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/migration.png" alt="" />
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/PAK85_USB131310_TP_V.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">データ移行</p>
+        <p class="p-menu__text">周辺機器</p>
       </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/other.png" alt="" />
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/MONOHDDdrive2013_TP_V.jpg" alt="" />
         </div>
-        <p class="p-topMenu__text">その他</p>
+        <p class="p-menu__text">HDD（ハードディスク）</p>
       </li>
-      <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/repair'); ?>'">一覧</button>
-    </ul>
-    <ul class="p-topMenu__list">
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/maintenance.png" alt="" />
-        </div>
-        <p class="p-topMenu__text">OSが起動しない</p>
-      </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/screen.png" alt="" />
-        </div>
-        <p class="p-topMenu__text">画面が割れてしまった</p>
-      </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/migration.png" alt="" />
-        </div>
-        <p class="p-topMenu__text">データが消えてしまった</p>
-      </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/repair-screen.jpeg" alt="" />
-        </div>
-        <p class="p-topMenu__text">画面が付かなくなった</p>
-      </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/hddssd.png" alt="" />
-        </div>
-        <p class="p-topMenu__text">HDD・SSDが壊れてしまった</p>
-      </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/battery.png" alt="" />
-        </div>
-        <p class="p-topMenu__text">充電がすぐになくなる</p>
-      </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/repair-keyboard.png" alt="" />
-        </div>
-        <p class="p-topMenu__text">キーボードが反応しない</p>
-      </li>
-      <li class="p-topMenu__item">
-        <div class="p-topMenu__imgContainer">
-          <img class="p-topMenu__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/other.png" alt="" />
-        </div>
-        <p class="p-topMenu__text">パソコンを落としてしまった</p>
-      </li>
-      <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/symptoms'); ?>'">一覧</button>
+      <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/purchase'); ?>'">一覧</button>
     </ul>
   </div>
 </section>

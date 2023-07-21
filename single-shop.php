@@ -29,9 +29,7 @@
         </div>
       </div>
       <div class="p-shopInfomation__shopImg">
-        <?php if (get_post_meta($post->ID, 'top_image', true)) : ?>
-          <?php echo wp_get_attachment_image(post_custom('top_image')); ?>
-        <?php endif; ?>
+        <img src="<?php echo $cfs->get('top_image'); ?>" alt="">
       </div>
     </div>
     <ul class="p-shopInfomation__contact">
@@ -79,9 +77,7 @@
     </div>
     <div class="p-shopIntroduction__wrapper">
       <div class="p-shopIntroduction__img">
-        <?php if (get_post_meta($post->ID, 'shop_image', true)) : ?>
-          <?php echo wp_get_attachment_image(post_custom('shop_image')); ?>
-        <?php endif; ?>
+        <img src="<?php echo $cfs->get('shop_image'); ?>" alt="">
       </div>
       <div class="p-shopIntroduction__textBox">
         <p>
@@ -94,7 +90,7 @@
         <p class="p-shopIntroduction__title">修理方法</p>
         <p>
         <?php
-          $values = CFS()->get( 'repair_select' );
+          $values = CFS()->get( 'purchase_select' );
           $selects = array(); // $selects配列を初期化する
           foreach ( $values as $key => $label ) {
             $selects[] = $label; // $labelを$selects配列に追加する
@@ -163,46 +159,20 @@
       </div>
     </div>
     <ul class="p-shopRoot__list">
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-        <?php if (get_post_meta($post->ID, 'root_img1', true)) : ?>
-            <?php echo wp_get_attachment_image(post_custom('root_img1')); ?>
-          <?php endif; ?>
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text1', true); ?>
-        </p>
-      </li>
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-        <?php if (get_post_meta($post->ID, 'root_img2', true)) : ?>
-            <?php echo wp_get_attachment_image(post_custom('root_img2')); ?>
-          <?php endif; ?>
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text2', true); ?>
-        </p>
-      </li>
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-        <?php if (get_post_meta($post->ID, 'root_img3', true)) : ?>
-            <?php echo wp_get_attachment_image(post_custom('root_img3')); ?>
-          <?php endif; ?>
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text3', true); ?>
-        </p>
-      </li>
-      <li class="p-shopRoot__item">
-        <div class="p-shopRoot__itemImg">
-        <?php if (get_post_meta($post->ID, 'root_img4', true)) : ?>
-            <?php echo wp_get_attachment_image(post_custom('root_img4')); ?>
-          <?php endif; ?>
-        </div>
-        <p>
-          <?php echo get_post_meta($post->ID, 'root_text4', true); ?>
-        </p>
-      </li>
+      <?php $fields02 = CFS()->get('root_list'); ?>
+      <?php if ($fields02) : //faq_loop が存在するとき
+      ?>
+        <?php foreach ($fields02 as $field) : ?>
+          <li class="p-shopRoot__item">
+            <div class="p-shopRoot__itemImg">
+              <img src="<?php echo $field['root_img1']; ?>" alt="">
+            </div>
+            <p>
+              <?php echo get_post_meta($post->ID, 'root_text1', true); ?>
+            </p>
+          </li>
+        <?php endforeach; ?>
+      <?php endif; ?>
     </ul>
     <div class="p-shopRoot__itemMap">
     <?php the_content(); ?>
