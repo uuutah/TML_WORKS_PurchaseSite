@@ -59,45 +59,45 @@
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/goriIMGL9729_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/PC.png" alt="" />
         </div>
         <p class="p-menu__text">ノートPC</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/point1.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/tablet-phone.jpg" alt="" />
         </div>
-        <p class="p-menu__text">タブレット</p>
+        <p class="p-menu__text">タブレット＆スマホ</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/AP2018FTHG5557_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/monitor.png" alt="" />
         </div>
-        <p class="p-menu__text">スマホ</p>
+        <p class="p-menu__text">モニター</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/business-switchx4_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/server.png" alt="" />
         </div>
-        <p class="p-menu__text">ネットワーク機器</p>
+        <p class="p-menu__text">サーバー&NAS</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/unific528--8617_TP_V.jpg" alt="" />
-        </div>
-        <p class="p-menu__text">サーバー</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/PAK85_USB131310_TP_V.jpg" alt="" />
-        </div>
-        <p class="p-menu__text">周辺機器</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/MONOHDDdrive2013_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/hdd.jpg" alt="" />
         </div>
         <p class="p-menu__text">HDD（ハードディスク）</p>
+      </li>
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/business-phone.png" alt="" />
+        </div>
+        <p class="p-menu__text">ビジネスフォン</p>
+      </li>
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/other.jpg" alt="" />
+        </div>
+        <p class="p-menu__text">その他周辺機器</p>
       </li>
       <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/purchase'); ?>'">一覧</button>
     </ul>
@@ -121,45 +121,45 @@
             'orderby' => 'description'
           )
         );
-        foreach ($categories as $cat): ?>
+        foreach ($categories as $cat) : ?>
           <li class="p-shop__item">
             <p class="p-shop__area"><?php echo ($cat->name); ?></p>
             <ul class="p-shop__loopBox">
               <?php
-                $children = get_terms('shop_category', 'hierarchical=0&parent=' . $cat->term_id);
-                if ($children): // 子タームの有無
-                  foreach ($children as $child): ?>
-                    <li class="p-shop__loop">
-                      <div class="p-shop__innerArea">
-                        <div class="p-shop__iconPref">
-                          <div class="p-shop__iconContainer">
-                            <img class="p-shop__icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-map.svg" alt="" />
-                          </div>
-                          <p class="p-shop__pref"><?php echo ($child->name); ?></p>
+              $children = get_terms('shop_category', 'hierarchical=0&parent=' . $cat->term_id);
+              if ($children) : // 子タームの有無
+                foreach ($children as $child) : ?>
+                  <li class="p-shop__loop">
+                    <div class="p-shop__innerArea">
+                      <div class="p-shop__iconPref">
+                        <div class="p-shop__iconContainer">
+                          <img class="p-shop__icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-map.svg" alt="" />
                         </div>
-                        <?php $catslug = $child->slug;
-                        $args = array(
-                          'post_type' => 'shop',
-                          'shop_category' => $catslug,
-                          'posts_per_page' => -1,
-                        );
-                        $myquery = new WP_Query($args);
-                        ?>
-                        <!-- 都道府県ごとの各店舗を表示するリストのループ -->
-                        <ul class="p-shop__shopNameList">
-                          <?php if ($myquery->have_posts()) : ?>
-                            <?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
-                              <li class="p-shop__shopName">
-                                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                              </li>
-                            <?php endwhile; ?>
-                          <?php endif; ?>
-                        </ul>
+                        <p class="p-shop__pref"><?php echo ($child->name); ?></p>
                       </div>
-                    </li>
-                    <?php wp_reset_postdata(); ?>
-                  <?php endforeach; ?>
-                <?php endif; ?>
+                      <?php $catslug = $child->slug;
+                      $args = array(
+                        'post_type' => 'shop',
+                        'shop_category' => $catslug,
+                        'posts_per_page' => -1,
+                      );
+                      $myquery = new WP_Query($args);
+                      ?>
+                      <!-- 都道府県ごとの各店舗を表示するリストのループ -->
+                      <ul class="p-shop__shopNameList">
+                        <?php if ($myquery->have_posts()) : ?>
+                          <?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
+                            <li class="p-shop__shopName">
+                              <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                            </li>
+                          <?php endwhile; ?>
+                        <?php endif; ?>
+                      </ul>
+                    </div>
+                  </li>
+                  <?php wp_reset_postdata(); ?>
+                <?php endforeach; ?>
+              <?php endif; ?>
               <!-- 子タームに紐づく記事一覧の表示終了 -->
             </ul>
           </li>
@@ -186,20 +186,22 @@
       ));
       global $post;
       if ($custom_posts) : foreach ($custom_posts as $post) : setup_postdata($post); ?>
-        <li class="p-info__item">
+          <li class="p-info__item">
             <a href="<?php the_permalink(); ?>">
               <div class="p-info__imgBox">
-                <?php if(has_post_thumbnail()): ?>
-                    <?php the_post_thumbnail('thumbnails', ['class' => '.p-info__image']); ?>
-                  <?php else: ?>
-                    <img class="p-info__imgBox" src="<?php echo get_template_directory_uri(); ?>/assets/images/macbook1993_TP_V.jpg" alt="">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('thumbnails', ['class' => '.p-info__image']); ?>
+                <?php else : ?>
+                  <img class="p-info__imgBox" src="<?php echo get_template_directory_uri(); ?>/assets/images/macbook1993_TP_V.jpg" alt="">
                 <?php endif; ?>
               </div>
-              <p class="p-info__text" ><?php the_title() ?></p>
+              <p class="p-info__text"><?php the_title() ?></p>
             </a>
-        </li>
-        <?php endforeach; wp_reset_postdata(); else : ?>
-          <p class="p-info__notFound">ブログ投稿がありません</p>
+          </li>
+        <?php endforeach;
+        wp_reset_postdata();
+      else : ?>
+        <p class="p-info__notFound">ブログ投稿がありません</p>
       <?php endif; ?>
     </ul>
   </div>
@@ -213,41 +215,42 @@
       </div>
     </div>
     <!-- <div class="p-topNews__container"> -->
-      <ul class="p-topNews__container">
-        <?php
-        $custom_posts = get_posts(array(
-          'post_type' => 'news', // 投稿タイプ
-          'posts_per_page' => 5, // 表示件数
-          'orderby' => 'date', // 表示順の基準
-          'order' => 'DESC', // 昇順・降順
-        ));
-        global $post;
-        if ($custom_posts) : foreach ($custom_posts as $post) : setup_postdata($post); ?>
-            <li class="p-topNews__article">
-              <a href="<?php the_permalink() ?>">
-                <p class="p-topNews__date"><?php the_time("Y-m-d"); ?></p>
-                <div class="p-topNews__articleTitle">
-                  <p>&lt;
-            <?php
-              $taxonomy = 'custom_tags'; // タグのタクソノミー名
-              $tags = get_the_terms(get_the_ID(), $taxonomy);
-
-              if ($tags && !is_wp_error($tags)) {
-                $tag_names = array();
-                foreach ($tags as $tag) {
-                    $tag_names[] = $tag->name;
-                }
-                echo implode(' / ', $tag_names);
-              }
-              ?>
-            &gt;<?php the_title(); ?></p>
-                </div>
-              </a>
-            </li>
-          <?php endforeach; wp_reset_postdata(); else : ?>
-            <p class="p-topNews__text">お知らせがありません</p>
-        <?php endif; ?>
-      </ul>
+    <ul class="p-topNews__container">
+      <?php
+      $custom_posts = get_posts(array(
+        'post_type' => 'news', // 投稿タイプ
+        'posts_per_page' => 5, // 表示件数
+        'orderby' => 'date', // 表示順の基準
+        'order' => 'DESC', // 昇順・降順
+      ));
+      global $post;
+      if ($custom_posts) : foreach ($custom_posts as $post) : setup_postdata($post); ?>
+          <li class="p-topNews__article">
+            <a href="<?php the_permalink() ?>">
+              <p class="p-topNews__date"><?php the_time("Y-m-d"); ?></p>
+              <div class="p-topNews__articleTitle">
+                <p>&lt;
+                  <?php
+                  $taxonomy = 'custom_tags'; // タグのタクソノミー名
+                  $tags = get_the_terms(get_the_ID(), $taxonomy);
+                  if ($tags && !is_wp_error($tags)) {
+                    $tag_names = array();
+                    foreach ($tags as $tag) {
+                      $tag_names[] = $tag->name;
+                    }
+                    echo implode(' / ', $tag_names);
+                  }
+                  ?>
+                  &gt;<?php the_title(); ?></p>
+              </div>
+            </a>
+          </li>
+        <?php endforeach;
+        wp_reset_postdata();
+      else : ?>
+        <p class="p-topNews__text">お知らせがありません</p>
+      <?php endif; ?>
+    </ul>
     <!-- </div> -->
   </div>
 </section>
@@ -260,215 +263,395 @@
           <p class="c-titleBox__text">Q&A</p>
         </div>
       </div>
-      <ul class="p-question__list">
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              領収書の発行は可能でしょうか？
+      <div class="p-question__box">
+        <h3 class="p-question__title">買取について</h3>
+        <ul class="p-question__list">
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                査定にはどのくらいの時間がかかりますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              店舗持ち込みの場合、5~10分程度です。商品点数によって10~30分程度いただいております。<br>
+              店舗の混み具合や大口のお取引によっては、お時間いただくこともございますが、1時間以内には査定が終わりように努めております。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！領収書を発行できます。修理ご依頼時、またはお会計時にお申し出ください。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              来店する際は、事前に予約は必要ですか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                どんなものが買取対象ですか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              詳しくは買取メニューページをご確認ください。U R L(買取メニューページ)
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            営業時間内でしたら、予約なしでいつでも受付可能です！即日修理をご希望される場合は、混雑状況によってご要望に添えないことがございますので事前にご連絡をお願いいたします。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              古いパソコンですが、修理できますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                定休日、営業時間を教えてください。
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              店舗一覧ページからお近くの店舗の営業時間をご確認ください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            承っておりますが、型番の古いパソコンについては、部品の流通が少ないため元の状態に完全に復元することが難しいです。
-            ご要望を伺い、データのみの引き継ぎや、海外からの部品調達などをご提案させていただき、その都度対応方法をご相談いたします。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              データは引き継げますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                駐車場はありますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              店舗によって異なるため、お近くの店舗にお電話でご確認ください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！データの引き継ぎは可能です。新しいパソコンに前のパソコンのデータを移したり、お持ちのパソコンのハードディスクを交換したり（SSDに換装）できますのでご相談ください。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              万が一、直らない場合買取は可能ですか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                事前に買取価格を教えてもらえますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              事前簡易査定をお申し込みいただけましたら、概算のお見積をお伝えさせていただきます。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！買取できます。パソコンが故障している場合は、100円から買取しております。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              Macも直せますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                故障したもの、古すぎるものも買い取ってくれますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              故障したものも、古すぎるものも買取可能です。買取金額があまりつかない場合もございますので、事前簡易査定をお申し込みいただくことをおすすめしております。<br>
+              ブラウン管は、処分費用5,000円がかかってしまうため、ご注意ください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            Apple 製品も修理可能です！Apple製品の部品の流通はメーカーに委ねられているため、機種や時期によっては修理が難しい場合がございます。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              仕事で使うので、すぐ直してほしいです。最短で修理する時はどのような流れになりますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                全国どこからでも利用できますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              全国どこからでもお申し込みいただけます。沖縄、北海道、離島の場合は、送料分をご負担いただく可能性がございます。事前にお電話またはLINE、お問い合わせフォームからお問い合わせください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            最短修理をご希望の際は事前にお電話をお願いいたします。その日の混雑状況や修理内容によって、即日修理が可能かご案内させていただきます。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              保証はありますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                高く売れるポイントを教えてください。
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              下記のような商品状態の場合は高額買取いたします。<br>
+              □購入した時の付属品がすべてそろっている<br>
+              □キズ、汚れなどがあまり目立たない<br>
+              □きれいにメンテナンスされている<br>
+              □季節に合った商品<br>
+              ※商品によって条件は異なります。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            修理保証期間は1ヶ月です。修理を行なった箇所に限り、再修理いたします。保証期間内でも、再修理が不可能な場合は返金にて承らせていただきます。修理後のデータ等の変化・消去、その他PCが動作しないことによる損失は保証対象外とさせていただきます。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              液晶に線が入りました。直せますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                商品の型番が不明なのですが査定はできますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              外箱、裏面のシール、取扱い説明書などに記載があることが多いです。<br>
+              ご不明な場合は確認方法をご案内しますので、お問い合わせください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！液晶の交換修理ができます。液晶の部品の取り寄せが必要なため、2日〜2週間ほどお時間いただく可能性がございます。お急ぎの方は、事前にご相談ください。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              パソコンの操作方法がわかりません＞＜教えて頂ことはできますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                付属品や箱がなくても買取可能ですか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              ほとんどの商品が買取可能です。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            当店はパソコンのハードを専門に扱っているため、ソフトについてはできる範囲でのサポートをさせていただきます。
-            ご期待に添えるかわかりませんが、時間制で料金をいただき承ることは可能です。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              オフィスのインストールをお願いすることはできますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                店舗が近くにないです。郵送でも買取できますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              ご来店以外にも、郵送での買取も承っております。初めての方へのページにお申し込みの手順を載せております。
+              詳しくはこちらをご確認ください。U R L(初めての方へメニューページ)
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            Office単体での販売はしておりません。当店で中古パソコンをご購入いただいた方で、オプションでOfficeをご選択いただいた方のみに初期設定をさせていただいております。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              郵送修理の場合、送料はかかりますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                送料はかかりますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              梱包キットや送料は無料です。（キャンセル時の返送料のみいただいております。）
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            かかりません。お荷物は着払いで当店ご郵送ください。（サーバーやブラウン管などパソコン以外のものは別途送料や廃棄費用をいただいております。）
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              複数台パソコンがあります！修理できますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                梱包方法について教えてください。
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              梱包方法についてはこちらをご参照ください。P D F
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！修理できます。複数台ある場合は、全部を即日修理することは難しいです。納期にお時間いただき修理いたします。
-            小出しでも差し支えなければ、修理完了した端末を順次お渡しすることは可能です。ご相談ください。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              ゲーミングPCも直せますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                家まで引き取りに来てくれますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              出張買取の場合は、別途ご相談させていただきます。お近くの店舗にお電話またはお問い合わせフォームよりご連絡ください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！修理できます。修理内容が高度になるため、別途お見積りいたします。事前にご相談をお願いいたします。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              交換した元の部品を持ち帰ることはできますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                自宅以外の場所に出張買取に来てもらうことはできますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              本人確認書類に記載の住所に限り出張買取ができます。法人や個人の方は別途ご相談ください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！できます。修理に伴い、取り外した部品の所有権は当社に帰属しております。必要な場合はあらかじめお申し付けください。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              QRコード決済やクレジットカードは使えますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                出張日時を変更したいのですが。
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              日程の変更や確認についてはお電話で承ります。日程の変更の場合は、前日までにご連絡をお願いいたします。場合によっては、ご希望の日時に沿えない可能性がございます。ご理解いただけますと幸いです。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            はい！お支払い方法は、現金またはクレジットカード、QRコード決済をご利用いただけます。また、店舗によって取り扱いが異なります。詳しくは各店舗ページの店舗紹介をご参照ください。
-          </p>
-        </li>
-        <hr />
-        <li class="p-question__item">
-          <div class="p-question__textBox">
-            <p class="p-question__text">
-              修理に納得できなかった場合、返金はされますか？
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                当日立ち会うのは申し込み本人でない家族の場合、本人確認書類はどうしたらいいですか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              当日立ち会う方の本人様確認書類をご用意ください。
             </p>
-            <span class="p-question__triger"></span>
-          </div>
-          <p class="p-question__text--hidden">
-            修理について、診断・見積は料金をいただいておりません。しかし、診断・見積後、お客様の了解の上作業を行なった場合は、作業費用は頂戴させていただいております。
-          </p>
-        </li>
-        <hr />
-      </ul>
+          </li>
+          <hr />
+        </ul>
+      </div>
+      <div class="p-question__box">
+        <h3 class="p-question__title">お支払いについて</h3>
+        <ul class="p-question__list">
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                現金以外の支払い方法を教えてください。
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              ご本人名義の金融機関口座へのお振込ができます。お振込の際、振込手数料は弊社にて負担させていただきます。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                査定後、キャンセルはできますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              店舗にご来店いただいた場合は、査定後、お支払い前にキャンセルいただくことは可能です。<br>
+              郵送の場合も、お支払い前にキャンセルいただいても構いませんが、ご返却時の郵送料をお客様にご負担をお願いしております。<br>
+              出張買取の場合は、原則買取前提で訪問させていただいております。そのため、出張買取のキャンセルはお断りさせていただいております。<br>
+              また、お客様による買取金額見積の承諾、もしくは買取代金のお支払をもって売買契約が成立し、商品の所有権は当社に移転するものとします。所有権移転後のキャンセル、返品は一切お受けできません。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                郵送買取を利用したいのですが、郵便局の口座に振り込めますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              郵便局の口座にも振り込みできます。郵便局の振込用口座をご確認のうえ、お申し込みください。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                回収日までに準備しておくことはありますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              下記3点をご準備ください。<br>
+              □買取品本体、付属品、箱等<br>
+              □本人確認書類<br>
+              □お申込書<br>
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                分割払い中（ネットワーク利用制限△）でも買取に出せますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              大変恐縮ですが、端末代金を分割でお支払い中の場合は買取いたしかねます。支払いが滞っている場合も、買取不可とさせていただいております。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                本人確認に表記されている住所が現住所と違うのですが？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              現住所と記載住所が同一であるものが必要です。恐縮ではございますが、異なっている場合はご利用いただけません。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                本人確認書類と異なる名義口座への振込は可能ですか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              本人確認書類のお名前と同一名義の振込口座に限ります。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                口座名義が旧姓のままなのですが、振込可能ですか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              旧姓を確認できる書類が必要となります。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                パソコンのデータは消去してもらえますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              買取したパソコンのデータについては、JEITAの定めるパソコンの廃棄・譲渡時におけるハードディスク上のデータ消去に関する留意事項に基づいて、販売前に消去を取り行っております。
+              データ消去証明書の発行(3,300円税込/1台~)も可能です。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                未成年なんですけど買い取ってくれますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              古物営業法、青少年健全育成条例に基づき、古物の売却は18歳以上に限られます。18歳未満の方は保護者の方から直接お申し込みいただくか、またはご本人がお申し込みいただく場合には、保護者買取同意書により保護者の同意を確認させていただきます。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                法人として取引がしたいのですが、問い合わせの窓口は？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              法人様のPC買取も行っております。事前にお近くの店舗にお問い合わせいただけますと幸いです。<br>
+              また弊社、加盟店を募集しております。詳しくは加盟店募集ページよりお問い合わせください。U R L
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                個人情報の管理は？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              当社は、ご利用者様より取得した個人情報を以下に定める範囲においてのみ使用致します。<br>
+              1、当社は,ご利用者様より取得した個人情報を、古物営業法上の取引確認・身元確認義務の履行、取引確認、商品・サービスをご紹介するためのDM等の配信、及び代金の送金目的以外には利用いたしません。また、公安委員会・警察署等の公的機関から法令に基づ く正式な照会を受けた場合を除いて、利用者の同意なく第三者に開示いたしません。<br>
+              2.個人情報を取得したご本人より、開示、訂正、削除、利用停止の申し出の際は本人確認など必要な手続きを経た後、 すみやかに対応いたします。
+            </p>
+          </li>
+          <hr />
+          <li class="p-question__item">
+            <div class="p-question__textBox">
+              <p class="p-question__text">
+                海外からの申し込みできますか？
+              </p>
+              <span class="p-question__triger"></span>
+            </div>
+            <p class="p-question__text--hidden">
+              大変申し訳ございませんが、現在、海外からの買取については対応しておりません。
+            </p>
+          </li>
+          <hr />
+        </ul>
+      </div>
     </div>
   </div>
 </section>

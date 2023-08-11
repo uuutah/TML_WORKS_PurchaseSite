@@ -18,46 +18,47 @@
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/goriIMGL9729_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/PC.png" alt="" />
         </div>
         <p class="p-menu__text">ノートPC</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/point1.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/tablet-phone.jpg" alt="" />
         </div>
-        <p class="p-menu__text">タブレット</p>
+        <p class="p-menu__text">タブレット＆スマホ</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/AP2018FTHG5557_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/monitor.png" alt="" />
         </div>
-        <p class="p-menu__text">スマホ</p>
+        <p class="p-menu__text">モニター</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/business-switchx4_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/server.png" alt="" />
         </div>
-        <p class="p-menu__text">ネットワーク機器</p>
+        <p class="p-menu__text">サーバー&NAS</p>
       </li>
       <li class="p-menu__item">
         <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/unific528--8617_TP_V.jpg" alt="" />
-        </div>
-        <p class="p-menu__text">サーバー</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/PAK85_USB131310_TP_V.jpg" alt="" />
-        </div>
-        <p class="p-menu__text">周辺機器</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/MONOHDDdrive2013_TP_V.jpg" alt="" />
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/hdd.jpg" alt="" />
         </div>
         <p class="p-menu__text">HDD（ハードディスク）</p>
       </li>
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/business-phone.png" alt="" />
+        </div>
+        <p class="p-menu__text">ビジネスフォン</p>
+      </li>
+      <li class="p-menu__item">
+        <div class="p-menu__imgContainer">
+          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/other.jpg" alt="" />
+        </div>
+        <p class="p-menu__text">その他周辺機器</p>
+      </li>
+      <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/purchase'); ?>'">一覧</button>
     </ul>
     <!-- <div class="p-menu__textBox">
       <p class="p-menu__text">上記選択肢またはメニューにない修理について</p>
