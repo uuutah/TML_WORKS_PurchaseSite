@@ -288,6 +288,7 @@
   }
   &__logo {
     width: 100%;
+    object-fit: contain;
   }
   &__navListBox {
     display: flex;

@@ -39,7 +39,7 @@
       <?php elseif(is_post_type_archive("news")) : ?>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news-top.jpg" alt="">
       <?php elseif(is_post_type_archive("revue")) : ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/revue-top.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/revue-top.png" alt="">
       <?php elseif(is_home()): ?>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top.jpg" alt="">
     <?php else: ?>

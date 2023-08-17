@@ -1,7 +1,7 @@
 @use '../../Foundation/global'as *;
 
 .p-flow {
-  padding: 80px 0px;
+  padding: 80px 0px 100px;
   @include mq("tab") {
     padding: 60px 0px;
   }
@@ -10,15 +10,16 @@
     padding: 0;
     @include mq("tab") {
       margin: 40px auto 0px;
-      max-width: 600px;
+      // max-width: 600px;
     }
   }
   &__listItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    height: 250px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 40px;
+    // height: 250px;
+    list-style: none;
     @include mq("tab") {
       flex-direction: column;
       justify-content: start;
@@ -57,15 +58,43 @@
     }
   }
   &__listTitle {
-    font-size: 24px;
+    font-size: 32px;
+    text-align: center;
+    background-color: $color-main;
+    color: $color-background-sub;
     @include mq("tab") {
       font-size: 20px;
     }
   }
-  &__listText {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
     margin-top: 40px;
     @include mq("tab") {
       margin-top: 20px;
+    }
+    @include mq("sp") {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__listText {
+    width: 23%;
+    @include mq("sp") {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  &__listTextSub {
+    width: 18%;
+    @include mq("sp") {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  &__text {
+    @include mq("sp") {
+      text-align: left;
     }
   }
   &__btn {

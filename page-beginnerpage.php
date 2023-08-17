@@ -4,47 +4,35 @@
           <div class="l-container">
             <h3 class="p-important__title">
               【お申し込みの前に】<br>
-              修理にあたって<br class="p-important__linefeed">ご準備いただくこと
-              <!-- ご利用にあたっての<br class="p-important__linefeed">注意点 -->
+              事前にご準備いただくこと
             </h3>
             <ul class="p-important__list">
               <li class="p-important__item">
                 <h4 class="p-important__itemTitle">
                   準備①<br>
-                  付属品をご用意ください。
+                  PC本体をご準備ください。
                 </h4>
                 <p class="p-important__text">
-                  デスクトップ型<span>※1</span>の場合は、パソコン本体、電源ケーブルをお持ち込み（ご郵送）ください。キーボード、マウスは必要ございません。
-                  ノート型の場合は、パソコン本体、ACアダプタをお持ち込み（ご郵送）ください。
-                  付属品が不足している場合、修理できないことがございます。ご不安な際は、お電話ください。<br>
-                  ※1デスクトップ型…モニター別型、モニター一体型
+                  査定対象商品のPCをご準備ください。コード類・付属品もございましたらご一緒にご用意ください。<br>
+                  パソコンをより高く売るためのコツは<span><a href="">こちら</a></span>に詳しく記載しています！<br>
+                  Apple製品について、Apple IDのサインアウトをお願いいたします。サインアウトされていない場合、買取できない可能性がございます。
                 </p>
               </li>
               <li class="p-important__item">
                 <h4 class="p-important__itemTitle">
                   準備②<br>
-                  データのバックアップを<br class="p-important__linefeed">お願いします。
+                  本人確認書類を必ずご用意ください。
                 </h4>
                 <p class="p-important__text">
-                  データのバックアップを必ずお取りいただくようにお願いしております。
-                  データの消去作業は致しませんが、
-                  本体の修理作業中にソフトウェアの誤作動やHDDの故障を含めた何らかの理由によりデータが初期化された場合も弊社では責任を負いかねます。
-                  また、修理後のデータの変化や消去など保証対象外とさせていただきます。
-                  データのバックアップについて、ご不安な方は、有料にはなりますがデータのクローンをお申し込みください。
+                  本人確認書類を査定対象商品とともにご持参またはお送りください。<br>
+                  例）<br>
+                  ・運転免許書のコピー(両面)<br>
+                  ・健康保険証のコピー(両面)<br>
+                  ・住民票の写し(原本)<br>
+                  ・印鑑登録証明書(原本)等<br>
+                  本人確認書類がない場合は、買取致しかねます。ご了承ください。
                 </p>
               </li>
-              <!-- <li class="p-important__item">
-                <h4 class="p-important__itemTitle">
-                  注意点3<br>
-                  データバックアップ
-                </h4>
-                <p class="p-important__text">
-                  データのバックアップは必ずお取り下さい。
-                  弊社では、製造メーカー等での修理とことなり、修理作業を行う上でデータの消去作業は行いません。<br>
-                  また、本体の修理作業によりソフトウェアの誤作動やHDDの故障を含めた何らかの理由によりデータが初期化された場合も弊社では責任を負いかねます。
-                  このことから弊社ではデータの事前バックアップを強くお勧め致します。
-                </p>
-              </li> -->
             </ul>
           </div>
         </section>
@@ -52,68 +40,104 @@
           <div class="l-container">
             <div class="c-titleBox">
               <div class="c-titleBox__wrapper">
-                <h3 class="c-titleBox__title">&#128304;修理の受付・<br class="p-important__linefeed">流れについて&#128304;</h3>
-                <!-- <p class="c-titleBox__text">Flow</p> -->
+                <h3 class="c-titleBox__title">&#128304;買取の流れについて&#128304;</h3>
               </div>
             </div>
             <ul class="p-flow__list">
               <li class="p-flow__listItem">
-                <div class="p-flow__textBox">
                   <h4 class="p-flow__listTitle">
-                    (1)まずはお気軽にお問い合わせください
+                    店頭買取
                   </h4>
-                  <p class="p-flow__listText">
-                    お電話またはお問合せフォームでお客様のお悩みをお聞かせください。症状に応じて最適な修理方法をご案内いたします。
-                    もちろん、ご予約なしでご来店いただいても構いません。
-                    修理に必要な納期や概算見積などもお伝えいたします。
-                  </p>
-                </div>
-                <div class="p-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/beginner1.jpg" alt=""></div>
-              </li>
-              <li class="p-flow__listItem--reverse">
-                <div class="p-flow__textBox">
-                  <h4 class="p-flow__listTitle">
-                    (2)郵送または店舗持ち込み、訪問
-                  </h4>
-                  <p class="p-flow__listText">
-                    お客様のニーズに合わせてサポートをお選びいただけます。郵送・店舗持ち込み・訪問の3種類がございます。
-                    郵送の場合は、パソコン本体と申込書を着払いで店舗宛にお送りください。申込書は下記からダウンロードして必要事項のご記入をお願いします。郵送する段ボールに【修理】と記載いただけると受取がスムーズになります。
-                    訪問の場合は、別途ご案内いたします。
-                    店舗持ち込みの場合は、ご予約なしでも受付いたします。
-                  </p>
-                  <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/店舗用修理依頼書.ver.1.0.pdf" download="修理依頼書.pdf" class="c-btn p-flow__btn">修理申込書&#40;PDF&#41;をダウンロード</a>
-                </div>
-                <div class="p-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/beginner2.jpg" alt=""></div>
+                  <div class="p-flow__wrapper">
+                    <p class="p-flow__listText">
+                      ①店頭にお持ち込み
+                    </p>
+                    <p class="p-flow__listText">
+                      ②買取申込書にご記入と本人確認書類のご提示をお願いいたします。
+                      店舗内でコピーを取らせていただきます。
+                      <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/.pdf" download="修理依頼書.pdf" class="c-btn p-flow__btn">買取申込書&#40;PDF&#41;をダウンロード</a>
+                    </p>
+                    <p class="p-flow__listText">
+                      ③原則、その場で査定いたします。持込点数によってはお時間がかかってしまう場合もございます。
+                    </p>
+                    <p class="p-flow__listText">
+                      ④査定終了後、現金にてお支払いいたします。
+                      お支払い金額が5万円以上の場合はお振込いたします。
+                    </p>
+                  </div>
               </li>
               <li class="p-flow__listItem">
-                <div class="p-flow__textBox">
                   <h4 class="p-flow__listTitle">
-                    (3)診断・お見積り
+                    郵送買取
                   </h4>
-                  <p class="p-flow__listText">
-                    実際にPCを見て、無料診断し、お見積をお伝えいたします。
-                    詳細なお見積や修理期間を調べるために、本体を分解しての診断が必要になる場合がございます。その際は作業費3,300円(税込)をいただいております。
-                    機器や症状によって修理期間が異なります。
-                    修理内容にご了承いただけましたら、パソコンをお預かりして作業を行います。
-                  </p>
-                </div>
-                <div class="p-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/beginner3.jpg" alt=""></div>
+                  <div class="p-flow__wrapper">
+                    <p class="p-flow__listTextSub">
+                      ①まずはお気軽にお問合せください。
+                      店舗一覧>>URL
+                      事前簡易査定いたします。
+                      お申込後、当社で集荷を手配いたします。
+                    </p>
+                    <p class="p-flow__listTextSub">
+                      ②買取申込書、本人確認書類のコピーをご用意ください。
+                      査定後必ず連絡が取れるように記入お願いいたします。
+                    </p>
+                    <p class="p-flow__listTextSub">
+                      ③商品を梱包し、本人確認書類と申込書を同梱の上発送をお願いいたします。
+                    </p>
+                    <p class="p-flow__listTextSub">
+                      ④商品到着後、すぐに査定いたします。
+                    </p>
+                    <p class="p-flow__listTextSub">
+                      ⑤査定完了後、お電話でご連絡いたします。ご了承後、ご指定の銀行口座にお振込いたします。
+                    </p>
+                  </div>
               </li>
-              <li class="p-flow__listItem--reverse">
-                <div class="p-flow__textBox">
+              <li class="p-flow__listItem">
                   <h4 class="p-flow__listTitle">
-                    (4)修理完了後、お支払い、ご返却
+                    出張買取
                   </h4>
-                  <p class="p-flow__listText">
-                    修理完了後、お電話またはメール、SMSにてご連絡いたします。
-                    ご来店いただける方は、お客様にも動作確認をしていただきます。問題なければ、お支払い確認後、ご返却いたします。
-                    お支払いは、現金または銀行振込、クレジットカード決済、QRカード決済、電子マネーからお選びいただけます。（店舗によって異なります。）
-                    ご来店のお客様でも郵送でのご返却も可能です！
-                  </p>
-                </div>
-                <div class="p-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/beginner4.jpg" alt=""></div>
+                  <div class="p-flow__wrapper">
+                    <p class="p-flow__text">
+                      原則5台以上で出張買取に伺います！
+                      詳しくはお近くの店舗にお問合せください。店舗一覧は<span><a href="<?php echo home_url("/shop"); ?>">こちら</a></span>
+                    </p>
+                  </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="p-attention">
+          <div class="l-container">
+            <div class="p-attention__wrapper">
+              <div class="c-titleBox">
+                <div class="c-titleBox__wrapper">
+                  <h3 class="c-titleBox__title">データの<br class="p-attention__linefeed">お取り扱いについて</h3>
+                </div>
+              </div>
+              <ul class="p-attention__list">
+                <li class="p-attention__listItem">
+                  パソコンに含まれるデータは、法律に基づき事前にお客様ご自身で消去してからお送りください。
+                </li>
+                <li class="p-attention__listItem">
+                  買取したパソコンのデータは全て、販売前に適切に消去しています。<br>
+                  データ消去証明書は事前にお申し込みいただけましたら発行可能です。（1台3,300円税込）
+              </ul>
+            </div>
+            <div class="p-attention__wrapper">
+              <div class="c-titleBox">
+                <div class="c-titleBox__wrapper">
+                  <h3 class="c-titleBox__title">注意事項</h3>
+                </div>
+              </div>
+              <ul class="p-attention__list">
+                <li class="p-attention__listItem">
+                  当社から査定結果をご連絡した日から7日を経過してもご本人様からご回答がない場合は、査定結果を承諾したものとみなし、お支払い手続きをいたします。
+                </li>
+                <li class="p-attention__listItem">
+                  口座情報の誤りがあり、お振込ができない場合かつ30日以内にご連絡がない場合は当店からのお支払いを放棄したものといたします。<br>
+                  買取についての規約はこちらからご確認いただけます。
+              </ul>
+            </div>
           </div>
         </section>
       <?php get_footer(); ?>

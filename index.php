@@ -287,7 +287,7 @@
               <span class="p-question__triger"></span>
             </div>
             <p class="p-question__text--hidden">
-              詳しくは買取メニューページをご確認ください。U R L(買取メニューページ)
+              詳しくは<span><a href="<?php echo home_url("/purchase"); ?>">買取メニューページ </a></span>をご確認ください。
             </p>
           </li>
           <hr />
@@ -403,7 +403,7 @@
             </div>
             <p class="p-question__text--hidden">
               ご来店以外にも、郵送での買取も承っております。初めての方へのページにお申し込みの手順を載せております。
-              詳しくはこちらをご確認ください。U R L(初めての方へメニューページ)
+              詳しくは<span><a href="<?php echo home_url("/beginnerpage"); ?>">こちら</a></span>こちらをご確認ください。
             </p>
           </li>
           <hr />
@@ -427,7 +427,7 @@
               <span class="p-question__triger"></span>
             </div>
             <p class="p-question__text--hidden">
-              梱包方法についてはこちらをご参照ください。P D F
+              梱包方法については<a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/konpo.pdf" download="konpo.pdf">こちら</a>をご参照ください。
             </p>
           </li>
           <hr />
@@ -620,7 +620,7 @@
             </div>
             <p class="p-question__text--hidden">
               法人様のPC買取も行っております。事前にお近くの店舗にお問い合わせいただけますと幸いです。<br>
-              また弊社、加盟店を募集しております。詳しくは加盟店募集ページよりお問い合わせください。U R L
+              また弊社、加盟店を募集しております。詳しくは <span><a href="<?php echo home_url("/franchiserecruiting"); ?>">加盟店募集ページ</a></span>よりお問い合わせください。
             </p>
           </li>
           <hr />
