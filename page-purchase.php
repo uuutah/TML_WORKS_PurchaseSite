@@ -58,15 +58,7 @@
         </div>
         <p class="p-menu__text">その他周辺機器</p>
       </li>
-      <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/purchase'); ?>'">一覧</button>
     </ul>
-    <!-- <div class="p-menu__textBox">
-      <p class="p-menu__text">上記選択肢またはメニューにない修理について</p>
-      <p class="p-menu__text">
-        修理メニューにない内容でも可能な範囲で修理させていただいております。お気軽にご相談ください^^<br>
-        作業費用や納期についてご案内させていただきます。店舗一覧からお近くの店舗をご確認ください！
-      </p>
-    </div> -->
   </div>
 </section>
 <?php get_footer(); ?>

@@ -50,13 +50,13 @@
   }
   &__imgContainer {
     width: 23vw;
-    height: 23vw;
+    height: 22.5vw;
     max-width: 300px;
     max-height: 300px;
     margin: 0 auto;
     @include mq('tab') {
-      width: 70vw;
-      height: 70vw;
+      width: 74vw;
+      height: 73vw;
     }
   }
   &__image {

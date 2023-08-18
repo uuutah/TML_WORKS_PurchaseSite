@@ -57,6 +57,9 @@
     @include mq("tab") {
       font-size: 20px;
     }
+    @include mq("sp") {
+      font-size: 12px;
+    }
   }
   &__title {
     font-size: 48px;
@@ -72,6 +75,12 @@
     }
   }
   &__linefeed {
+    display: none;
+    @include mq("sp") {
+      display: block;
+    }
+  }
+  &__linefeedSub {
     display: none;
     @include mq("sp") {
       display: block;

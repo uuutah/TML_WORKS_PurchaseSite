@@ -5,7 +5,7 @@
     <div class="c-titleBox">
       <div class="c-titleBox__wrapper">
         <p class="p-work__subTitle">PC・ワークスが信頼される<br class="p-work__linefeed">3つのポイント</p>
-        <h3 class="c-titleBox__title">修理のことなら<br class="p-work__linefeed">PCワークス</h3>
+        <h3 class="c-titleBox__title">パソコン売るなら<br class="p-work__linefeed">PCワークス</h3>
       </div>
     </div>
     <ul class="p-work__list">
@@ -13,21 +13,21 @@
         <div class="p-work__imgContainer">
           <img class="p-work__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/top_work01.png" alt="丸画像" />
         </div>
-        <h2 class="p-work__title">親切丁寧</h2>
+        <h2 class="p-work__title">安心安全</h2>
         <p class="p-work__text">
-          故障の症状や原因を丁寧にヒアリングいたします。お急ぎの方は、最短即日修理も可能です。お客様の思い出の詰まったパソコンです。大切に扱わせていただきます！
+          PC1台から無料で事前に簡易査定いたします！買取後、全てのPCはデータを消去しているため、データ流出の心配もございません。ご入用の方はデータ消去証明書の発行も承っております！
         </p>
       </li>
       <li class="p-work__item">
         <div class="p-work__imgContainer">
-          <img class="p-work__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/top_work02.png" alt="丸画像" />
+          <img class="p-work__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/top_work02.jpg" alt="丸画像" />
         </div>
-        <h2 class="p-work__title">安心価格</h2>
+        <h2 class="p-work__title">高額買取</h2>
         <!-- <p class="p-work__text">
           パソコン専門店のための<br />お手頃な修理価格を実現致しました!!
         </p> -->
         <p class="p-work__text">
-          より多くの皆様が気軽に修理をご依頼できるように、安心価格でご提供しております！PC専門店ならではの仕入ルートを確保することでお手頃価格を実現しています。
+          パソコンに関する専門性が高く、買い取ったPCはリユースして販売しております。そのため、他店では金属として引き取っているPCも、当店では高値で買い取ることができます！
         </p>
       </li>
       <li class="p-work__item">
@@ -36,7 +36,7 @@
         </div>
         <h2 class="p-work__title">PC専門店</h2>
         <p class="p-work__text">
-          中古パソコンの販売・修理・買取の事業を展開しているため、専門的な知識を持ったスタッフが多数在中！直らないと諦めていたPCも一度ご相談ください！
+          中古パソコンの販売・修理・買取の事業を展開しているため、専門的な知識や経験を持ったスタッフが多数在中しています！壊れているから売れないと諦めている方も一度お持ち込みください！
         </p>
       </li>
     </ul>
@@ -74,30 +74,6 @@
           <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/monitor.png" alt="" />
         </div>
         <p class="p-menu__text">モニター</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/server.png" alt="" />
-        </div>
-        <p class="p-menu__text">サーバー&NAS</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/hdd.jpg" alt="" />
-        </div>
-        <p class="p-menu__text">HDD（ハードディスク）</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/business-phone.png" alt="" />
-        </div>
-        <p class="p-menu__text">ビジネスフォン</p>
-      </li>
-      <li class="p-menu__item">
-        <div class="p-menu__imgContainer">
-          <img class="p-menu__image" src="<?php echo get_template_directory_uri(); ?>//assets/images/other.jpg" alt="" />
-        </div>
-        <p class="p-menu__text">その他周辺機器</p>
       </li>
       <button class="p-topMenu__btn" onclick="location.href='<?php echo home_url('/purchase'); ?>'">一覧</button>
     </ul>
@@ -171,7 +147,7 @@
 <section class="p-info">
   <div class="l-container">
     <div class="p-info__titleBox">
-      <h3 class="p-info__title">【新着&excl;&excl;】<br class="p-info__linefeed">🕊パソコン買取ブログ🕊</h3>
+      <h3 class="p-info__title">【新着&excl;&excl;】<br class="p-info__linefeed">⭐️パソコン買取ブログ⭐️</h3>
       <div class="p-info__titleWrapper">
         <!-- <p class="c-titleBox__text">Pick Up</p> -->
       </div>

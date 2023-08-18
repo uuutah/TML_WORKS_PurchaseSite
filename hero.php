@@ -2,7 +2,7 @@
   <div class="c-hero__titleBackground">
     <div class="c-hero__titleBox">
       <?php if(is_home()){
-        echo "<p class='c-hero__topText'>大手の半額程度の<br c-hero__linefeed>安心価格!!</p>";
+        echo "<p class='c-hero__topText'>パソコン専門店ならではの<br class='c-hero__linefeedSub'>高額買取<br>壊れたパソコンも大丈夫!!</p>";
       } ?>
       <h2 class="c-hero__title">
         <?php if(is_home()) {
@@ -25,7 +25,7 @@
           if(empty($custom_fields) === false){
             echo $custom_fields;
           } elseif(is_home()){
-            echo "<p class='c-hero__subTitle'>店舗持ち込み、郵送修理対応可能!!<br>PC専門店ならではの熟練した技術とコスパを実現!!</p>";
+            echo "<p class='c-hero__subTitle'>店舗持ち込み•郵送買取可能!!<br>データは完全消去!!<br class='c-hero__linefeedSub'>証明書の発行もできます!</p>";
           }
         ?>
       </p>
@@ -41,7 +41,7 @@
       <?php elseif(is_post_type_archive("revue")) : ?>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/revue-top.png" alt="">
       <?php elseif(is_home()): ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top.png" alt="">
     <?php else: ?>
         <?php the_post_thumbnail(); ?>
     <?php endif; ?>

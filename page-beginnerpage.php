@@ -55,7 +55,8 @@
                     <p class="p-flow__listText">
                       ②買取申込書にご記入と本人確認書類のご提示をお願いいたします。
                       店舗内でコピーを取らせていただきます。
-                      <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/.pdf" download="修理依頼書.pdf" class="c-btn p-flow__btn">買取申込書&#40;PDF&#41;をダウンロード</a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/individualpurchaserequestform.pdf" download="individualpurchaserequestform.pdf" class="c-btn p-flow__btn">【個人用】買取依頼書<br class="p-flow__linefeed">&#40;PDF&#41;をダウンロード</a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/corporationpurchaserequestform.pdf" download="corporationpurchaserequestform.pdf" class="c-btn p-flow__btn">【法人用】買取依頼書<br class="p-flow__linefeed">&#40;PDF&#41;をダウンロード</a>
                     </p>
                     <p class="p-flow__listText">
                       ③原則、その場で査定いたします。持込点数によってはお時間がかかってしまう場合もございます。
@@ -136,6 +137,8 @@
                 <li class="p-attention__listItem">
                   口座情報の誤りがあり、お振込ができない場合かつ30日以内にご連絡がない場合は当店からのお支払いを放棄したものといたします。<br>
                   買取についての規約はこちらからご確認いただけます。
+                </li>
+                <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/termsofpurchase.pdf" download="termsofpurchase.pdf" class="c-btn p-attention__btn">買取規約（PDF）のダウンロードはこちら</a>
               </ul>
             </div>
           </div>

@@ -26,4 +26,17 @@
       display: block;
     }
   }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 20px auto 0;
+    width: 500px;
+    @include mq("tab") {
+      margin: 10px auto 0;
+      width: 100%;
+      max-width: 350px;
+    }
+  }
 }

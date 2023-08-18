@@ -4,15 +4,15 @@
   <div class="l-container">
     <div class="c-titleBox">
       <div class="c-titleBox__wrapper">
-        <h3 class="c-titleBox__title">パソコン修理<br class="c-titleBox__linefeed">フランチャイズ<br class="c-titleBox__linefeed">加盟店募集</h3>
+        <h3 class="c-titleBox__title">パソコン買取<br class="c-titleBox__linefeed">フランチャイズ<br class="c-titleBox__linefeed">加盟店募集</h3>
       </div>
     </div>
     <p class="p-franchise__text">
       PCワークスではビジネスパートナーを募集しております。
       弊社のマーケティング力とノウハウをご提供させていただき、
-      既にパソコン修理事業を展開されている企業様、店舗様へは集客・収益UPをご協力させていただきます。
-      iPhone修理、その他の事業を展開されている企業様、店舗様も是非 ご検討ください。<br>
-      パソコン修理未経験の企業様、店舗様向けに様々なコースをご提供しておりますのでご安心ください。
+      既にパソコン買取事業を展開されている企業様、店舗様へは集客・収益UPをご協力させていただきます。
+      リユース業、その他の事業を展開されている企業様、店舗様も是非 ご検討ください。<br>
+      パソコン未経験の企業様、店舗様向けに様々なコースをご提供しておりますのでご安心ください。
       新店オープンから様々な内容をトータルサポートいたします。
     </p>
   </div>
