@@ -87,7 +87,7 @@
       <nav class="p-footer__nav">
         <div class="p-footer__logoContainer">
           <a href="<?php echo home_url(); ?>">
-            <img class="p-footer__logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/top-icon-reuse.png" alt="会社ロゴ" />
+            <img class="p-footer__logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/top-icon-reuse.jpg" alt="会社ロゴ" />
           </a>
         </div>
         <div class="p-footer__navListBox">
