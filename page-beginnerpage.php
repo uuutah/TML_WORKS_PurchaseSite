@@ -14,7 +14,7 @@
                 </h4>
                 <p class="p-important__text">
                   査定対象商品のPCをご準備ください。コード類・付属品もございましたらご一緒にご用意ください。<br>
-                  パソコンをより高く売るためのコツは<span><a href="">こちら</a></span>に詳しく記載しています！<br>
+                  パソコンをより高く売るためのコツは<span><a href="<?php echo home_url(); ?>#buy-point">こちらのQ&A</a></span>に詳しく記載しています！<br>
                   Apple製品について、Apple IDのサインアウトをお願いいたします。サインアウトされていない場合、買取できない可能性がございます。
                 </p>
               </li>
@@ -30,7 +30,7 @@
                   ・健康保険証のコピー(両面)<br>
                   ・住民票の写し(原本)<br>
                   ・印鑑登録証明書(原本)等<br>
-                  本人確認書類がない場合は、買取致しかねます。ご了承ください。
+                  本人確認書類がない場合は、買取致しかねます。<br>ご了承ください。
                 </p>
               </li>
             </ul>
@@ -115,14 +115,19 @@
                   <h3 class="c-titleBox__title">データの<br class="p-attention__linefeed">お取り扱いについて</h3>
                 </div>
               </div>
-              <ul class="p-attention__list">
-                <li class="p-attention__listItem">
-                  パソコンに含まれるデータは、法律に基づき事前にお客様ご自身で消去してからお送りください。
-                </li>
-                <li class="p-attention__listItem">
-                  買取したパソコンのデータは全て、販売前に適切に消去しています。<br>
-                  データ消去証明書は事前にお申し込みいただけましたら発行可能です。（1台3,300円税込）
-              </ul>
+              <div class="p-attention__box">
+                <ul class="p-attention__list">
+                  <li class="p-attention__listItem">
+                    パソコンに含まれるデータは、法律に基づき事前に<br>お客様ご自身で消去してからお送りください。
+                  </li>
+                  <li class="p-attention__listItem">
+                    買取したパソコンのデータは全て、販売前に適切に消去しています。<br>
+                    データ消去証明書は事前にお申し込みいただけましたら発行可能です。（1台3,300円税込）
+                </ul>
+                <div class="p-attention__img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sample.png" alt="">
+                </div>
+              </div>
             </div>
             <div class="p-attention__wrapper">
               <div class="c-titleBox">
@@ -130,7 +135,7 @@
                   <h3 class="c-titleBox__title">注意事項</h3>
                 </div>
               </div>
-              <ul class="p-attention__list">
+              <ul class="p-attention__listSub">
                 <li class="p-attention__listItem">
                   当社から査定結果をご連絡した日から7日を経過してもご本人様からご回答がない場合は、査定結果を承諾したものとみなし、お支払い手続きをいたします。
                 </li>

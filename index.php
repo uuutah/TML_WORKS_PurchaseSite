@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php get_template_part('hero'); ?>
+<?php get_template_part('top-hero'); ?>
 <section class="p-work">
   <div class="l-container">
     <div class="c-titleBox">
@@ -15,7 +15,7 @@
         </div>
         <h2 class="p-work__title">安心安全</h2>
         <p class="p-work__text">
-          PC1台から無料で事前に簡易査定いたします！買取後、全てのPCはデータを消去しているため、データ流出の心配もございません。ご入用の方はデータ消去証明書の発行も承っております！
+          PC1台から無料で事前に簡易査定いたします！<br class="p-work__linefeed">買取後、全てのPCはデータを消去しているため、<br class="p-work__linefeed">データ流出の心配もございません。<br>ご入用の方はデータ消去証明書の発行も<br class="p-work__linefeed">承っております！
         </p>
       </li>
       <li class="p-work__item">
@@ -27,7 +27,7 @@
           パソコン専門店のための<br />お手頃な修理価格を実現致しました!!
         </p> -->
         <p class="p-work__text">
-          パソコンに関する専門性が高く、買い取ったPCはリユースして販売しております。そのため、他店では金属として引き取っているPCも、当店では高値で買い取ることができます！
+          パソコンに関する専門性が高く、<br class="p-work__linefeed">買い取ったPCはリユースして販売しております。<br class="p-work__linefeed">そのため、他店では金属として引き取っているPCも、<br class="p-work__linefeed">当店では高値で買い取ることができます！
         </p>
       </li>
       <li class="p-work__item">
@@ -36,7 +36,7 @@
         </div>
         <h2 class="p-work__title">PC専門店</h2>
         <p class="p-work__text">
-          中古パソコンの販売・修理・買取の事業を展開しているため、専門的な知識や経験を持ったスタッフが多数在中しています！壊れているから売れないと諦めている方も一度お持ち込みください！
+          中古パソコンの販売・修理・買取の事業を<br class="p-work__linefeed">展開しているため、専門的な知識や経験を持った<br class="p-work__linefeed">スタッフが多数在中しています！<br>壊れているから売れないと諦めている方も<br>一度お持ち込みください！
         </p>
       </li>
     </ul>
@@ -263,7 +263,8 @@
               <span class="p-question__triger"></span>
             </div>
             <p class="p-question__text--hidden">
-              詳しくは<span><a href="<?php echo home_url("/purchase"); ?>">買取メニューページ </a></span>をご確認ください。
+              詳しくは<span><a href="<?php echo home_url("/purchase"); ?>">買取メニューページ </a></span>をご確認ください。<br>
+              買取対象のお品物かわからない場合は、お近くの店舗に直接お電話ください。
             </p>
           </li>
           <hr />
@@ -328,7 +329,7 @@
             </p>
           </li>
           <hr />
-          <li class="p-question__item">
+          <li class="p-question__item" id="buy-point">
             <div class="p-question__textBox">
               <p class="p-question__text">
                 高く売れるポイントを教えてください。
@@ -366,7 +367,7 @@
               <span class="p-question__triger"></span>
             </div>
             <p class="p-question__text--hidden">
-              ほとんどの商品が買取可能です。
+              はい！ほとんどの商品が付属品や箱がなくても買取できます。
             </p>
           </li>
           <hr />
@@ -378,8 +379,8 @@
               <span class="p-question__triger"></span>
             </div>
             <p class="p-question__text--hidden">
-              ご来店以外にも、郵送での買取も承っております。初めての方へのページにお申し込みの手順を載せております。
-              詳しくは<span><a href="<?php echo home_url("/beginnerpage"); ?>">こちら</a></span>こちらをご確認ください。
+              ご来店以外にも、郵送での買取も承っております。初めての方へのページにお申し込みの手順を載せております。<br>
+              詳しくは<span><a href="<?php echo home_url("/beginnerpage"); ?>">こちら</a></span>をご確認ください。
             </p>
           </li>
           <hr />
@@ -509,7 +510,7 @@
             <p class="p-question__text--hidden">
               下記3点をご準備ください。<br>
               □買取品本体、付属品、箱等<br>
-              □本人確認書類<br>
+              □本人確認書類のコピー<br>
               □お申込書<br>
             </p>
           </li>
@@ -583,7 +584,8 @@
               <span class="p-question__triger"></span>
             </div>
             <p class="p-question__text--hidden">
-              古物営業法、青少年健全育成条例に基づき、古物の売却は18歳以上に限られます。18歳未満の方は保護者の方から直接お申し込みいただくか、またはご本人がお申し込みいただく場合には、保護者買取同意書により保護者の同意を確認させていただきます。
+              古物営業法、青少年健全育成条例に基づき、古物の売却は18歳以上に限られます。<br>18歳未満の方は保護者の方から直接お申し込みいただくか、またはご本人がお申し込みいただく場合には、<br><a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/guardian_agreement_document.pdf" download="guardian_agreement_document.pdf"">保護者買取同意書</a>により保護者の同意を確認させていただきます。<br>
+              そして、18歳未満の方は、保護者買取同意書がある場合でも郵送買取はご利用いただけません。ご了承ください。
             </p>
           </li>
           <hr />
@@ -595,7 +597,7 @@
               <span class="p-question__triger"></span>
             </div>
             <p class="p-question__text--hidden">
-              法人様のPC買取も行っております。事前にお近くの店舗にお問い合わせいただけますと幸いです。<br>
+              法人様のPC買取も行っております。事前にお近くの店舗にお問い合わせください。<br>
               また弊社、加盟店を募集しております。詳しくは <span><a href="<?php echo home_url("/franchiserecruiting"); ?>">加盟店募集ページ</a></span>よりお問い合わせください。
             </p>
           </li>
