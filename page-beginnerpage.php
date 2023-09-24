@@ -45,52 +45,83 @@
             </div>
             <ul class="p-flow__list">
               <li class="p-flow__listItem">
-                  <h4 class="p-flow__listTitle">
-                    店頭買取
-                  </h4>
-                  <div class="p-flow__wrapper">
-                    <p class="p-flow__listText">
-                      ①店頭にお持ち込み
-                    </p>
-                    <p class="p-flow__listText">
-                      ②買取申込書にご記入と本人確認書類のご提示をお願いいたします。
-                      店舗内でコピーを取らせていただきます。
+                <h4 class="p-flow__listTitle">
+                  店頭買取
+                </h4>
+                <ul class="p-flow__wrapper">
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper">
+                      <span class="p-flow__number">1</span>
+                      <p class="p-flow__listText">
+                        店頭にお持ち込み
+                      </p>
+                    </div>
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-shop.png" alt="">
+                    </div>
+                  </li>
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper">
+                      <span class="p-flow__number">2</span>
+                      <p class="p-flow__listText">
+                        買取申込書にご記入と本人確認書類のご提示をお願いいたします。
+                        店舗内でコピーを取らせていただきます。
+                      </p>
+                    </div>
+                    <div class="p-flow__box">
                       <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/individualpurchaserequestform.pdf" download="individualpurchaserequestform.pdf" class="c-btn p-flow__btn">【個人用】買取依頼書<br class="p-flow__linefeed">&#40;PDF&#41;をダウンロード</a>
                       <a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/corporationpurchaserequestform.pdf" download="corporationpurchaserequestform.pdf" class="c-btn p-flow__btn">【法人用】買取依頼書<br class="p-flow__linefeed">&#40;PDF&#41;をダウンロード</a>
-                    </p>
-                    <p class="p-flow__listText">
-                      ③原則、その場で査定いたします。持込点数によってはお時間がかかってしまう場合もございます。
-                    </p>
-                    <p class="p-flow__listText">
-                      ④査定終了後、現金にてお支払いいたします。
-                      お支払い金額が5万円以上の場合はお振込いたします。
-                    </p>
-                  </div>
+                    </div>
+                  </li>
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper">
+                      <span class="p-flow__number">3</span>
+                      <p class="p-flow__listText">
+                        原則、その場で査定いたします。持込点数によってはお時間がかかってしまう場合もございます。
+                      </p>
+                    </div>
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-assessment.jpg" alt="">
+                    </div>
+                  </li>
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper">
+                      <span class="p-flow__number">4</span>
+                      <p class="p-flow__listText">
+                        査定終了後、現金にてお支払いいたします。
+                        お支払い金額が5万円以上の場合はお振込いたします。
+                      </p>
+                    </div>
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-payment.jpg" alt="">
+                    </div>
+                  </li>
+                </ul>
               </li>
               <li class="p-flow__listItem">
                   <h4 class="p-flow__listTitle">
                     郵送買取
                   </h4>
                   <div class="p-flow__wrapper">
-                    <p class="p-flow__listTextSub">
+                    <div class="p-flow__listTextSub">
                       ①まずはお気軽にお問合せください。
                       店舗一覧>>URL
                       事前簡易査定いたします。
                       お申込後、当社で集荷を手配いたします。
-                    </p>
-                    <p class="p-flow__listTextSub">
+                    </div>
+                    <div class="p-flow__listTextSub">
                       ②買取申込書、本人確認書類のコピーをご用意ください。
                       査定後必ず連絡が取れるように記入お願いいたします。
-                    </p>
-                    <p class="p-flow__listTextSub">
+                    </div>
+                    <div class="p-flow__listTextSub">
                       ③商品を梱包し、本人確認書類と申込書を同梱の上発送をお願いいたします。
-                    </p>
-                    <p class="p-flow__listTextSub">
+                    </div>
+                    <div class="p-flow__listTextSub">
                       ④商品到着後、すぐに査定いたします。
-                    </p>
-                    <p class="p-flow__listTextSub">
+                    </div>
+                    <div class="p-flow__listTextSub">
                       ⑤査定完了後、お電話でご連絡いたします。ご了承後、ご指定の銀行口座にお振込いたします。
-                    </p>
+                    </div>
                   </div>
               </li>
               <li class="p-flow__listItem">

@@ -50,7 +50,7 @@
         if ($custom_posts) : foreach ($custom_posts as $post) : setup_postdata($post); ?>
             <li class="p-shopList__shopInfoItem">
               <div class="p-shopList__shopInfoImg">
-                <?php the_post_thumbnail('thumbnails'); ?>
+                <img src="<?php echo $cfs->get('top_image'); ?>" alt="">
               </div>
               <div class="p-shopList__shopIntroduce">
                 <p class="p-shopList__shopName"><?php the_title(); ?></p>

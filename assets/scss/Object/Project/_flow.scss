@@ -60,16 +60,27 @@
   &__listTitle {
     font-size: 32px;
     text-align: center;
-    background-color: $color-main;
-    color: $color-background-sub;
+    color: $color-main;
+    flex-shrink: 1;
+    &::before {
+      display: block;
+      position: relative;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 200px;
+      height: 3px;
+      background-color: $color-main;
+    }
     @include mq("tab") {
       font-size: 20px;
     }
   }
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
+    justify-content: center;
+    margin-top: 20px;
     @include mq("tab") {
       margin-top: 20px;
     }
@@ -78,12 +89,64 @@
       gap: 10px;
     }
   }
-  &__listText {
-    width: 23%;
+  &__listBox {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: 1px solid $color-main;
+    // padding: 10px 20px;
+
     @include mq("sp") {
       width: 100%;
       text-align: left;
     }
+  }
+  &__textWrapper {
+    display: flex;
+    background-color: #87d490;
+    color: $color-background-sub;
+    padding: 10px;
+    gap: 20px;
+  }
+  &__number {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px ;
+  }
+  &__listText {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    height: 100px;
+    & ::after {
+      display: block;
+      position: relative;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 200px;
+      height: 3px;
+      background-color: $color-main;
+    }
+  }
+  &__listImg {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__box {
+    flex-shrink: 1;
+    padding: 50px 10px;
   }
   &__listTextSub {
     width: 18%;
