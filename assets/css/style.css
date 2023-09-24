@@ -329,7 +329,7 @@ select {
 @media (max-width: 900px) {
   .c-hero__title {
     font-size: 30px;
-    white-space: nowrap;
+    white-space: inherit;
   }
 }
 .c-hero__subTitle {
@@ -367,6 +367,10 @@ select {
 }
 .c-hero__homeImg--right img {
   width: 100%;
+}
+.c-hero__thumbnailImg {
+  -o-object-fit: fill !important;
+     object-fit: fill !important;
 }
 
 .p-example {
@@ -537,6 +541,10 @@ select {
     width: 100%;
     height: 100%;
   }
+}
+.p-shopList__shopInfoImg img {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .p-shopList__shopIntroduce {
   max-width: 400px;

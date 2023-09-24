@@ -42,6 +42,8 @@
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/revue-top.png" alt="">
     <?php elseif(is_home()): ?>
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top.png" alt="">
+    <?php elseif(is_singular("shop")): ?>
+      <?php the_post_thumbnail('full', ['class' => 'c-hero__thumbnailImg'] ); ?>
     <?php else: ?>
       <?php the_post_thumbnail(); ?>
     <?php endif; ?>
