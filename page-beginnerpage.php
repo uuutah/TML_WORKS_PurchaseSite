@@ -43,16 +43,16 @@
                 <h3 class="c-titleBox__title">&#128304;買取の流れについて&#128304;</h3>
               </div>
             </div>
-            <ul class="p-flow__list">
+            <ul class="p-flow__list breadcrumb">
               <li class="p-flow__listItem">
                 <h4 class="p-flow__listTitle">
                   店頭買取
                 </h4>
                 <ul class="p-flow__wrapper">
                   <li class="p-flow__listBox">
-                    <div class="p-flow__textWrapper">
+                    <div class="p-flow__textWrapper--first">
                       <span class="p-flow__number">1</span>
-                      <p class="p-flow__listText">
+                      <p class="p-flow__listText ">
                         店頭にお持ち込み
                       </p>
                     </div>
@@ -61,7 +61,7 @@
                     </div>
                   </li>
                   <li class="p-flow__listBox">
-                    <div class="p-flow__textWrapper">
+                    <div class="p-flow__textWrapper--second">
                       <span class="p-flow__number">2</span>
                       <p class="p-flow__listText">
                         買取申込書にご記入と本人確認書類のご提示をお願いいたします。
@@ -74,7 +74,7 @@
                     </div>
                   </li>
                   <li class="p-flow__listBox">
-                    <div class="p-flow__textWrapper">
+                    <div class="p-flow__textWrapper--third">
                       <span class="p-flow__number">3</span>
                       <p class="p-flow__listText">
                         原則、その場で査定いたします。持込点数によってはお時間がかかってしまう場合もございます。
@@ -85,7 +85,7 @@
                     </div>
                   </li>
                   <li class="p-flow__listBox">
-                    <div class="p-flow__textWrapper">
+                    <div class="p-flow__textWrapper--forthLinefeed">
                       <span class="p-flow__number">4</span>
                       <p class="p-flow__listText">
                         査定終了後、現金にてお支払いいたします。
@@ -99,30 +99,72 @@
                 </ul>
               </li>
               <li class="p-flow__listItem">
-                  <h4 class="p-flow__listTitle">
-                    郵送買取
-                  </h4>
-                  <div class="p-flow__wrapper">
-                    <div class="p-flow__listTextSub">
-                      ①まずはお気軽にお問合せください。
-                      店舗一覧>>URL
-                      事前簡易査定いたします。
-                      お申込後、当社で集荷を手配いたします。
+                <h4 class="p-flow__listTitle">
+                  郵送買取
+                </h4>
+                <ul class="p-flow__wrapper">
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper--first">
+                      <span class="p-flow__number">1</span>
+                      <p class="p-flow__listText--large ">
+                        まずはお気軽にお問合せください。
+                        <a class="p-flow__link" href="<?php echo home_url("shop"); ?>">店舗一覧</a><br>
+                        事前簡易査定いたします。
+                        お申込後、当社で集荷を手配いたします。
+                      </p>
                     </div>
-                    <div class="p-flow__listTextSub">
-                      ②買取申込書、本人確認書類のコピーをご用意ください。
-                      査定後必ず連絡が取れるように記入お願いいたします。
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-contact.png" alt="">
                     </div>
-                    <div class="p-flow__listTextSub">
-                      ③商品を梱包し、本人確認書類と申込書を同梱の上発送をお願いいたします。
+                  </li>
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper--second">
+                      <span class="p-flow__number">2</span>
+                      <p class="p-flow__listText--large">
+                        買取申込書、本人確認書類のコピーをご用意ください。
+                        査定後必ず連絡が取れるように記入お願いいたします。
+                      </p>
                     </div>
-                    <div class="p-flow__listTextSub">
-                      ④商品到着後、すぐに査定いたします。
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-application.png" alt="">
                     </div>
-                    <div class="p-flow__listTextSub">
-                      ⑤査定完了後、お電話でご連絡いたします。ご了承後、ご指定の銀行口座にお振込いたします。
+                  </li>
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper--thirdLinefeed">
+                      <span class="p-flow__number">3</span>
+                      <p class="p-flow__listText--large">
+                        商品を梱包し、本人確認書類と申込書を同梱の上発送をお願いいたします。
+                      </p>
                     </div>
-                  </div>
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-shipping.png" alt="">
+                    </div>
+                  </li>
+                </ul>
+                <ul class="p-flow__wrapper">
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper--forth">
+                      <span class="p-flow__number">4</span>
+                      <p class="p-flow__listText--large">
+                        商品到着後、すぐに査定いたします。
+                      </p>
+                    </div>
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-assessment.jpg" alt="">
+                    </div>
+                  </li>
+                  <li class="p-flow__listBox">
+                    <div class="p-flow__textWrapper--fifth">
+                      <span class="p-flow__number">5</span>
+                      <p class="p-flow__listText--large">
+                        査定完了後、お電話でご連絡いたします。ご了承後、ご指定の銀行口座にお振込いたします。
+                      </p>
+                    </div>
+                    <div class="p-flow__listImg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-tel.jpg" alt="">
+                    </div>
+                  </li>
+                </ul>
               </li>
               <li class="p-flow__listItem">
                   <h4 class="p-flow__listTitle">
@@ -156,7 +198,7 @@
                     データ消去証明書は事前にお申し込みいただけましたら発行可能です。（1台3,300円税込）
                 </ul>
                 <div class="p-attention__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sample.png" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/data.jpg" alt="">
                 </div>
               </div>
             </div>

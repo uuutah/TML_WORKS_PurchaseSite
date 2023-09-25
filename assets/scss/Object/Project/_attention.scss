@@ -4,6 +4,9 @@
   @include mq("tab") {
     padding: 0 50px 60px;
   }
+  @include mq(sp) {
+    padding: 0 0 60px;
+  }
   &__wrapper {
     margin-top: 60px;
     &:first-child {
@@ -15,14 +18,24 @@
     align-items: center;
     gap: 5%;
     margin: 40px auto 0;
+    @include mq(tab) {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
   &__list {
     width: 60%;
+    @include mq(tab) {
+      width: 90%;
+    }
   }
   &__listSub {
     width: 100%;
     max-width: 1000px;
     margin: 40px auto 0;
+    @include mq(tab) {
+      width: 90%;
+    }
   }
   &__listItem {
     margin-top: 15px;
