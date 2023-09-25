@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="p-shopInfomation__shopImg">
-        <img src="<?php echo $cfs->get('shop1'); ?>" alt="">
+        <img src="<?php echo $cfs->get('top_image'); ?>" alt="">
       </div>
     </div>
     <ul class="p-shopInfomation__contact">
