@@ -4367,7 +4367,6 @@ select {
 }
 @media (max-width: 900px) {
   .p-merit__img {
-    height: auto;
     margin: 0 auto;
   }
 }
