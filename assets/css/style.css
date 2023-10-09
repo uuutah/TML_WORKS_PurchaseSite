@@ -128,12 +128,7 @@ select {
 }
 @media (max-width: 900px) {
   .l-main {
-    padding-top: 56px;
-  }
-}
-@media (max-width: 599px) {
-  .l-main {
-    padding-top: 35px;
+    padding-top: 70px;
   }
 }
 .l-container {
