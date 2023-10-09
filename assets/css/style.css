@@ -3204,7 +3204,6 @@ select {
 }
 @media (max-width: 900px) {
   .p-flow__img {
-    height: auto;
     margin: 0 auto;
   }
 }
