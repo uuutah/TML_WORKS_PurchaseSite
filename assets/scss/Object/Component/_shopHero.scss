@@ -3,6 +3,10 @@
 .c-shopHero {
   position: relative;
   display: flex;
+  @include mq(tab) {
+    display: block;
+    height: 70vw;
+  }
   &__backGround {
     position: absolute;
     top: 0;
@@ -20,7 +24,7 @@
     height: 500px;
     width: 50%;
     @include mq("tab") {
-      height: 300px;
+      display: none;
     }
     & img {
       height: 100%;
@@ -33,6 +37,10 @@
     width: 50%;
     background: rgb(63,180,77);
     background: linear-gradient(90deg, rgba(63,180,77,1) 35%, rgba(207,234,214,1) 90%);
+    @include mq(tab) {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__titleBox {
     // position: absolute;
@@ -64,7 +72,7 @@
   &__title {
     font-size: 48px;
     @include mq("tab") {
-      font-size: 30px;
+      font-size: 10vw;
       white-space: inherit;
     }
   }

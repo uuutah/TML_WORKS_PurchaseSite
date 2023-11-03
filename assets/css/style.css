@@ -375,6 +375,12 @@ select {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 900px) {
+  .c-shopHero {
+    display: block;
+    height: 70vw;
+  }
+}
 .c-shopHero__backGround {
   position: absolute;
   top: 0;
@@ -396,7 +402,7 @@ select {
 }
 @media (max-width: 900px) {
   .c-shopHero__img {
-    height: 300px;
+    display: none;
   }
 }
 .c-shopHero__img img {
@@ -413,6 +419,12 @@ select {
   background: -webkit-gradient(linear, left top, right top, color-stop(35%, rgb(63, 180, 77)), color-stop(90%, rgb(207, 234, 214)));
   background: -webkit-linear-gradient(left, rgb(63, 180, 77) 35%, rgb(207, 234, 214) 90%);
   background: linear-gradient(90deg, rgb(63, 180, 77) 35%, rgb(207, 234, 214) 90%);
+}
+@media (max-width: 900px) {
+  .c-shopHero__titleBackground {
+    width: 100%;
+    height: 100%;
+  }
 }
 .c-shopHero__titleBox {
   display: inline-block;
@@ -442,7 +454,7 @@ select {
 }
 @media (max-width: 900px) {
   .c-shopHero__title {
-    font-size: 30px;
+    font-size: 10vw;
     white-space: inherit;
   }
 }
