@@ -75,6 +75,8 @@ function init_func() {
     "menu_icon" => "",
     'supports' => array('title','editor','thumbnail', 'taxonomies'),
     'taxonomies' => array( 'custom_tags' ),
+    'capability_type' => array( 'blog', 'blogs' ),
+    'map_meta_cap'    => true
   ]);
 }
 add_action("init", "init_func");
