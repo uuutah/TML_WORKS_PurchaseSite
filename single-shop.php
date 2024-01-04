@@ -108,7 +108,7 @@
     </div>
   </div>
 </section>
-<section class="p-shopRepairCost">
+<!-- <section class="p-shopRepairCost">
   <div class="l-container">
     <div class="c-titleBox">
       <div class="c-titleBox__wrapper">
@@ -144,7 +144,7 @@
     </table>
     <p>※店舗によって価格が異なります。詳細については店舗までお問い合わせください</p>
   </div>
-</section>
+</section> -->
 <section class="p-shopRoot">
   <div class="l-container">
     <div class="c-titleBox">
