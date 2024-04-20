@@ -12,7 +12,6 @@
             'paged' => $paged, //ページネーション用
           )
         );
-        $blogList_query = new WP_Query($args);
         if ($blogList_query->have_posts()) :
           while ($blogList_query->have_posts()) :
             $blogList_query->the_post();
@@ -36,10 +35,9 @@
           </a>
           <hr/>
         </li>
-      <?php endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
+      <?php endwhile; else : wp_reset_postdata(); ?>
+        <p class="p-blogList__notFound">ブログ投稿がありません</p>
+      <? endif; ?>
     </ul>
     <?php wp_pagenavi(); ?>
   </div>

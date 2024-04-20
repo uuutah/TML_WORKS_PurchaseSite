@@ -4991,6 +4991,10 @@ select {
     margin-top: 10px;
   }
 }
+.p-blogList__notFound {
+  text-align: center;
+  font-size: 16px;
+}
 
 .wp-pagenavi {
   text-align: center;
@@ -5066,6 +5070,10 @@ select {
   .p-newsList__text {
     margin-top: 10px;
   }
+}
+.p-newsList__notFound {
+  text-align: center;
+  font-size: 16px;
 }
 
 .wp-pagenavi {
