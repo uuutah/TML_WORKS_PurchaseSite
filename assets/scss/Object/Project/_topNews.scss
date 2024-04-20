@@ -4,7 +4,7 @@
   padding: 120px 0 80px;
   margin: 0 auto;
   @include mq('tab') {
-    padding: 30px 0 60px;
+    padding: 60px 0 60px;
   }
   &__container {
     display: flex;
@@ -13,6 +13,11 @@
     margin: 80px auto 0;
     @include mq('tab') {
       margin-top: 40px;
+      gap: 30px;
+    }
+    @include mq('sp') {
+      margin-top: 40px;
+      gap: 30px;
     }
   }
   &__article {
@@ -27,7 +32,11 @@
       text-decoration: none;
       color: $color-text;
       @include mq('tab') {
-        gap: 15px;
+        gap: 5px;
+        flex-direction: column;
+      }
+      @include mq('sp') {
+        gap: 5px;
         flex-direction: column;
       }
     }
@@ -51,5 +60,55 @@
   }
   &__text {
     margin: 0 auto;
+  }
+  &__listLinkBox {
+    text-align: right;
+    margin-top: 30px;
+    @include mq('tab') {
+      margin-top: 20px;
+    }
+  }
+  &__listLink {
+    position: relative;
+    right: 0;
+    margin: 0 80px 0 auto;
+    padding-right: 60px;
+    text-decoration: none;
+    cursor: pointer;
+    @include mq('tab') {
+      margin: 0 auto;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: -8px;
+      right: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background-color: $color-main;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      top: 7px;
+      right: 15px;
+      // transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-top: 3px solid #fff;
+      border-right: 3px solid #fff;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    background-color: $color-main;
+    cursor: pointer;
   }
 }

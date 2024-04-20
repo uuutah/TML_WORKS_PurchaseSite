@@ -162,24 +162,26 @@
       ));
       global $post;
       if ($custom_posts) : foreach ($custom_posts as $post) : setup_postdata($post); ?>
-          <li class="p-info__item">
-            <a href="<?php the_permalink(); ?>">
-              <div class="p-info__imgBox">
-                <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail('thumbnails', ['class' => '.p-info__image']); ?>
-                <?php else : ?>
-                  <img class="p-info__imgBox" src="<?php echo get_template_directory_uri(); ?>/assets/images/macbook1993_TP_V.jpg" alt="">
-                <?php endif; ?>
-              </div>
-              <p class="p-info__text"><?php the_title() ?></p>
-            </a>
-          </li>
-        <?php endforeach;
-        wp_reset_postdata();
-      else : ?>
+        <li class="p-info__item">
+          <a href="<?php the_permalink(); ?>">
+            <div class="p-info__imgBox">
+              <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail('thumbnails', ['class' => '.p-info__image']); ?>
+              <?php else : ?>
+                <img class="p-info__imgBox" src="<?php echo get_template_directory_uri(); ?>/assets/images/macbook1993_TP_V.jpg" alt="">
+              <?php endif; ?>
+            </div>
+            <p class="p-info__text"><?php the_title() ?></p>
+          </a>
+        </li>
+      <?php endforeach; wp_reset_postdata(); ?>
+    </ul>
+    <div class="p-info__listLinkBox">
+      <a class="p-info__listLink" href="<?php echo home_url("/blog"); ?>">もっと見る</a>
+    </div>
+      <? else : ?>
         <p class="p-info__notFound">ブログ投稿がありません</p>
       <?php endif; ?>
-    </ul>
   </div>
 </section>
 <section class="p-topNews">
@@ -201,32 +203,34 @@
       ));
       global $post;
       if ($custom_posts) : foreach ($custom_posts as $post) : setup_postdata($post); ?>
-          <li class="p-topNews__article">
-            <a href="<?php the_permalink() ?>">
-              <p class="p-topNews__date"><?php the_time("Y-m-d"); ?></p>
-              <div class="p-topNews__articleTitle">
-                <p>&lt;
-                  <?php
-                  $taxonomy = 'custom_tags'; // タグのタクソノミー名
-                  $tags = get_the_terms(get_the_ID(), $taxonomy);
-                  if ($tags && !is_wp_error($tags)) {
-                    $tag_names = array();
-                    foreach ($tags as $tag) {
-                      $tag_names[] = $tag->name;
-                    }
-                    echo implode(' / ', $tag_names);
+        <li class="p-topNews__article">
+          <a href="<?php the_permalink() ?>">
+            <p class="p-topNews__date"><?php the_time("Y-m-d"); ?></p>
+            <div class="p-topNews__articleTitle">
+              <p>&lt;
+                <?php
+                $taxonomy = 'custom_tags'; // タグのタクソノミー名
+                $tags = get_the_terms(get_the_ID(), $taxonomy);
+                if ($tags && !is_wp_error($tags)) {
+                  $tag_names = array();
+                  foreach ($tags as $tag) {
+                    $tag_names[] = $tag->name;
                   }
-                  ?>
-                  &gt;<?php the_title(); ?></p>
-              </div>
-            </a>
-          </li>
-        <?php endforeach;
-        wp_reset_postdata();
-      else : ?>
-        <p class="p-topNews__text">お知らせがありません</p>
-      <?php endif; ?>
+                  echo implode(' / ', $tag_names);
+                }
+                ?>
+                &gt;<?php the_title(); ?></p>
+            </div>
+          </a>
+        </li>
+      <?php endforeach; wp_reset_postdata(); ?>
     </ul>
+    <div class="p-topNews__listLinkBox">
+      <a class="p-topNews__listLink" href="<?php echo home_url("/news"); ?>">もっと見る</a>
+    </div>
+    <? else : ?>
+      <p class="p-topNews__text">お知らせがありません</p>
+    <?php endif; ?>
     <!-- </div> -->
   </div>
 </section>
