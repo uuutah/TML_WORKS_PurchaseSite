@@ -4,9 +4,13 @@
   <div class="l-container">
     <ul class="p-blogList__list">
       <?php
-        $args = array(
-          'post_type' => 'blog', // 投稿タイプを指定
-          'posts_per_page' => 10, // 表示する記事数
+        $pages = get_query_var('paged') ? get_query_var('paged') : 1;
+        $blogList_query = new WP_Query(
+          array(
+            'post_type' => 'blog', // 投稿タイプを指定
+            'posts_per_page' => 10, // 表示する記事数
+            'paged' => $paged, //ページネーション用
+          )
         );
         $blogList_query = new WP_Query($args);
         if ($blogList_query->have_posts()) :
@@ -37,6 +41,7 @@
       wp_reset_postdata();
       ?>
     </ul>
+    <?php wp_pagenavi(); ?>
   </div>
 </section>
 <?php get_footer(); ?>
